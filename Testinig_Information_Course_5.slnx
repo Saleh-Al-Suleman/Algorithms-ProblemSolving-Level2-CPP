@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Testinig_Information_Course_5.vcxproj" />
+  <Project Path="Testinig_Information_Course_5.vcxproj" Id="2d00463b-db95-44d5-914a-444c2de79010" />
 </Solution>

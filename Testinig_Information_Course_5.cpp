@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -39,9 +40,74 @@ void PrintMultipliactionTable()
     }
     cout << "-----------------------------------------------------------------------------------\n";
 }
+
+// #Problem2: 
+// Print All Prime Numbers From 1 to N
+
+enum enPrimeNotPrime { Prime = 1, NotPrime = 2 };
+
+int ReadPositiveNumber(string Message)
+{
+    int num = 0;
+    do
+    {
+        cout << Message;
+        cin >> num;
+    } while (num <= 0);
+    return num;
+}
+
+enPrimeNotPrime CheckPrime(int Number)
+{
+    int m = round(Number / 2);
+    for (int Counter = 2; Counter <= m; Counter++)
+    {
+        if (Number % Counter == 0)
+            return enPrimeNotPrime::NotPrime;
+    }
+    return enPrimeNotPrime::Prime;
+}
+
+void PrintPrimeNumbersFrom1ToN(int EndNumber_N)
+{
+    cout << "\nPrime Numbers From " << 1 << " To " << EndNumber_N << " are:\n";
+    bool isFirstInLine = true;
+
+    short counter = 0;
+    for (int i = 1; i <= EndNumber_N; i++)
+    {
+        if (CheckPrime(i) == enPrimeNotPrime::Prime)
+        {
+            if (isFirstInLine)
+            {
+                cout << "[";
+                isFirstInLine = false;
+            }
+            else
+            {
+                cout << ", ";
+            }
+            cout << right << setw(5) << i;
+            counter++;
+            if (counter == 5)
+            {
+                cout << "]\n";
+                counter = 0;
+                isFirstInLine = true;
+            }
+        }
+    }
+    if (counter > 0)
+        cout << "]\n";
+}
+
 int main()
 {
-    PrintMultipliactionTable();
+    // this the call with Problem one #Multipliaction
+    //PrintMultipliactionTable();
+
+    // this the call with Problem one #PrintPrimeNumberFrom1ToN
+    PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));
     return 0;
 }
 
