@@ -101,13 +101,46 @@ void PrintPrimeNumbersFrom1ToN(int EndNumber_N)
         cout << "]\n";
 }
 
+// #Problem3: 
+// Print is the Number Perfect or Not
+
+bool isPerfect(int Number)
+{
+    int sum = 0;
+    for (int i = 1; i <= Number / 2; i++)
+    {
+        if (Number % i == 0)
+        {
+            sum += i;
+        }
+    }
+
+    return Number == sum;
+}
+
+void PrintIsPerfectNumber(int Number)
+{
+    cout << "\t";
+    if (isPerfect(Number))
+    {
+        cout << Number << " Is Prefect Number" << endl;
+    }
+    else
+    {
+        cout << Number << " Is Not Prefect Number" << endl;
+    }
+}
+
 int main()
 {
     // this the call with Problem one #Multipliaction
     //PrintMultipliactionTable();
 
-    // this the call with Problem one #PrintPrimeNumberFrom1ToN
-    PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));
+    // this the call with Problem two #PrintPrimeNumberFrom1ToN
+    //PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));
+
+    // this the call with Problem Three #PrintPerfectNumberOrNot
+    PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));
     return 0;
 }
 
