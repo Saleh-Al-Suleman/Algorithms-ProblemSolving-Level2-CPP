@@ -190,27 +190,46 @@ int CalcDigitsOfSumNumbers(int number)
     return sum;
 }
 
+//#Problem 7: ReverseNumber
+int ReverseNumber(int number)
+{
+    int remender = 0, newNum = 0;
+
+    while (number > 0)
+    {
+        remender = number % 10;
+        number /= 10;
+        newNum = newNum * 10 + remender;
+    }
+    return newNum;
+}
+
 int main()
 {
-    // this the call with Problem one #Multipliaction
+    //// this the call with Problem one #Multipliaction
     //PrintMultipliactionTable();
 
-    // this the call with Problem two #PrintPrimeNumberFrom1ToN
+    //// this the call with Problem two #PrintPrimeNumberFrom1ToN
     //PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));
 
-    // this the call with Problem Three #PrintPerfectNumberOrNot
+    //// this the call with Problem Three #PrintPerfectNumberOrNot
     //PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));
 
-    // this the call with problem four #PrintPerfectnumbersFromOneToN
+    //// this the call with problem four #PrintPerfectnumbersFromOneToN
     //PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "));
 
-    //this the call with Problem 5 #PrintDigits_in_aReversed Order
+    ////this the call with Problem 5 #PrintDigits_in_aReversed Order
     //PrintDigits(ReadPositiveNumber("Please enter a number: "));
 
-    //this the call with problem 6 #SumOfDigits
-    int number = ReadPositiveNumber("Please enter a number: ");
-    cout << "\n\tSum of digits: " << CalcDigitsOfSumNumbers(number);
-    cout << "\n-------------------------------------------------------------------" << endl;
+    ////this the call with problem 6 #SumOfDigits
+    //int number = ReadPositiveNumber("Please enter a number: ");
+    //cout << "\n\tSum of digits: " << CalcDigitsOfSumNumbers(number);
+    //cout << "\n-------------------------------------------------------------------" << endl;
+
+    // this the call with Problem 7 #ReverseNumber
+    int numtoReverse = ReadPositiveNumber("Please enter a number: ");
+    cout << "This is the reverse number [" << numtoReverse << "] is equal: [" << ReverseNumber(numtoReverse) << "].\n";
+    cout << "-------------------------------------------------------------\n";
     return 0;
 }
 
