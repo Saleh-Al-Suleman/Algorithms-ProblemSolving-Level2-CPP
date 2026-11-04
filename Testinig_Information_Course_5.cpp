@@ -177,6 +177,18 @@ void PrintDigits(int number)
     cout << "]\n---------------------------------------------------------\n";
 }
 
+//#Problem 6: Sum Of Digits
+int CalcDigitsOfSumNumbers(int number)
+{
+    int Remender = 0, sum = 0;
+    while (number > 0)
+    {
+        Remender = number % 10;
+        number = number / 10;
+        sum += Remender;
+    }
+    return sum;
+}
 
 int main()
 {
@@ -193,7 +205,12 @@ int main()
     //PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "));
 
     //this the call with Problem 5 #PrintDigits_in_aReversed Order
-    PrintDigits(ReadPositiveNumber("Please enter a number: "));
+    //PrintDigits(ReadPositiveNumber("Please enter a number: "));
+
+    //this the call with problem 6 #SumOfDigits
+    int number = ReadPositiveNumber("Please enter a number: ");
+    cout << "\n\tSum of digits: " << CalcDigitsOfSumNumbers(number);
+    cout << "\n-------------------------------------------------------------------" << endl;
     return 0;
 }
 
