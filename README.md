@@ -17,6 +17,8 @@ The goal of this repository is to practice core programming logic, optimize algo
  <img width="450" height="65" alt="Screenshot (1011)" src="https://github.com/user-attachments/assets/192b24fe-f667-4d17-9021-57dc27c32a8c" />
  <img width="471" height="87" alt="Screenshot (1012)" src="https://github.com/user-attachments/assets/0dfb3b0d-5d1b-4f0f-9611-abb8a36798b9" />
 
+
 - **Problem #4:** Print Perfect Numbers From 1 to N - Find and display all perfect numbers from 1 to a user-defined limit N, using an `enum`-based checking function with an optimized loop (`Number / 2`).
+  
 <img width="877" height="200" alt="Solution_#Problem4" src="https://github.com/user-attachments/assets/690a3947-4b56-4985-8840-cebb65593932" />
 
