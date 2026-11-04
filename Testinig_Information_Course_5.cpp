@@ -163,6 +163,21 @@ void PrintPerfectNumbersFromOneToN(int Number_End)
     cout << "---------------------------------------------\n";
 }
 
+//#Problem 5: Print Digits in a Reversed Order
+void PrintDigits(int number)
+{
+    cout << "\nThe Number Inputed: [" << number << "] this is reversed order:\t[";
+    int Remender = 0;
+    while (number > 0)
+    {
+        Remender = number % 10;
+        number /= 10;
+        cout << Remender;
+    }
+    cout << "]\n---------------------------------------------------------\n";
+}
+
+
 int main()
 {
     // this the call with Problem one #Multipliaction
@@ -175,7 +190,10 @@ int main()
     //PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));
 
     // this the call with problem four #PrintPerfectnumbersFromOneToN
-    PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "));
+    //PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "));
+
+    //this the call with Problem 5 #PrintDigits_in_aReversed Order
+    PrintDigits(ReadPositiveNumber("Please enter a number: "));
     return 0;
 }
 
