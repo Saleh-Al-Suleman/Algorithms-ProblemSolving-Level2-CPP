@@ -13,6 +13,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 <img width="488" height="255" alt="Screenshot (1007)" src="https://github.com/user-attachments/assets/c9656d93-4e8d-4550-ab8d-7cd63af6d3bb" />
 
 - **Problem #3:** Perfect Number - Check if a given positive number is Perfect or Not with an optimized loop (`Number / 2`) for maximum performance.
+  
  <img width="450" height="65" alt="Screenshot (1011)" src="https://github.com/user-attachments/assets/192b24fe-f667-4d17-9021-57dc27c32a8c" />
  <img width="471" height="87" alt="Screenshot (1012)" src="https://github.com/user-attachments/assets/0dfb3b0d-5d1b-4f0f-9611-abb8a36798b9" />
 
