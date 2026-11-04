@@ -25,3 +25,5 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #5:** Print Digits in a Reversed Order - Extracts and displays the digits of a given positive integer in reverse order using the modulo (`% 10`) and division (`/ 10`) operators.
 <img width="840" height="124" alt="Solution_#Problem5" src="https://github.com/user-attachments/assets/3769b791-6978-4188-8f40-93723e5d0785" />
 
+- **Problem #6:** Sum of Digits - Calculates and returns the total sum of all digits within a given positive integer using efficient arithmetic operators (`% 10` and `/ 10`).
+<img width="885" height="124" alt="Solution_#Problem6" src="https://github.com/user-attachments/assets/dcdbd999-55f1-412c-abb9-431dfee57c71" />
