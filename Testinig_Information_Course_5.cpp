@@ -131,6 +131,38 @@ void PrintIsPerfectNumber(int Number)
     }
 }
 
+// #Problem 4:
+// Print Perfect Numbers From 1 to N
+
+enum enCheckPerfectNotPerfectNumber { Perfect = 1, NotPerfect = 2 };
+
+enCheckPerfectNotPerfectNumber CheckPerfectNotPrefectNumber(int Number)
+{
+    int sum = 0;
+    for (int i = 1; i <= Number / 2; i++)
+    {
+        if (Number % i == 0)
+            sum += i;
+    }
+    if (sum == Number)
+        return enCheckPerfectNotPerfectNumber::Perfect;
+    else
+        return enCheckPerfectNotPerfectNumber::NotPerfect;
+}
+
+void PrintPerfectNumbersFromOneToN(int Number_End)
+{
+    cout << "\nInputed Number: [" << Number_End << "] -> the Perfect Number(s) From 1 to [" << Number_End << "].\n";
+
+    for (int i = 1; i <= Number_End; i++)
+    {
+        if (CheckPerfectNotPrefectNumber(i) == enCheckPerfectNotPerfectNumber::Perfect)
+            cout << "\t" << i << endl;
+    }
+
+    cout << "---------------------------------------------\n";
+}
+
 int main()
 {
     // this the call with Problem one #Multipliaction
@@ -140,7 +172,10 @@ int main()
     //PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));
 
     // this the call with Problem Three #PrintPerfectNumberOrNot
-    PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));
+    //PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));
+
+    // this the call with problem four #PrintPerfectnumbersFromOneToN
+    PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "));
     return 0;
 }
 
