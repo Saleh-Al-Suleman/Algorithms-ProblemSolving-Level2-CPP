@@ -27,3 +27,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 - **Problem #6:** Sum of Digits - Calculates and returns the total sum of all digits within a given positive integer using efficient arithmetic operators (`% 10` and `/ 10`).
 <img width="885" height="124" alt="Solution_#Problem6" src="https://github.com/user-attachments/assets/dcdbd999-55f1-412c-abb9-431dfee57c71" />
+
+- **Problem #7:** Reverse Number - Reverses a given positive integer and returns it as a new number using pure mathematical logic (`newNum * 10 + remainder`) without string conversion.
+<img width="813" height="98" alt="Solution_#Problem7" src="https://github.com/user-attachments/assets/0bd591d6-e40a-4e96-931b-84dba3c19a63" />
+
