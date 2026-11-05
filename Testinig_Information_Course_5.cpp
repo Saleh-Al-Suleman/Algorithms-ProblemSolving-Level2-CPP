@@ -180,13 +180,13 @@ void PrintPerfectNumbersFromOneToN(int Number_End)
 //#Problem 5: Print Digits in a Reversed Order
 void PrintDigits(int number)
 {
-    cout << "\nThe Number Inputed: [" << number << "] this is reversed order:\t[";
+    cout << "\nThe Number Inputed: [" << number << "] this is reversed order:\t[ ";
     int Remender = 0;
     while (number > 0)
     {
         Remender = number % 10;
         number /= 10;
-        cout << Remender;
+        cout << Remender << " ";
     }
     cout << "]\n---------------------------------------------------------\n";
 }
@@ -244,6 +244,12 @@ void PrintAllDigitsFrequency(int Number)
     }
 }
 
+//#Problem 10: Print Digits in Order
+void PrintDigitsinOrder(int Number)
+{
+    PrintDigits(ReverseNumber(Number));
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -278,9 +284,14 @@ int main()
     //cout << CountTheDigit(NumberToCount, digitToCheck) << ") Times(s)..." << endl;
     //cout << "-------------------------------------------------------------\n";
 
-    //this the call with problem 9 #DigitFrecuencyPrintAll
+    ////this the call with problem 9 #DigitFrecuencyPrintAll
+    //cout << "----------------------------------------------\n";
+    //PrintAllDigitsFrequency(ReadPositiveNumber("Please enter a number: "));
+    //cout << "----------------------------------------------\n";
+
+    // this the call with problem 10 #PrintDigits_in_Order
     cout << "----------------------------------------------\n";
-    PrintAllDigitsFrequency(ReadPositiveNumber("Please enter a number: "));
+    PrintDigitsinOrder(ReadPositiveNumber("Please enter a number: "));
     cout << "----------------------------------------------\n";
     return 0;
 }
