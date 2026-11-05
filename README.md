@@ -33,3 +33,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 - **Problem #8:** Digit Frequency - Counts how many times a specific digit appears inside a given positive integer using memory-efficient types (`short`) and conditional loops.
 <img width="901" height="202" alt="Solution_#Problem8" src="https://github.com/user-attachments/assets/5e0dec20-0571-4604-805a-0bdf9b7814c3" />
+
+- **Problem #9:** Print All Digits Frequency - Displays the frequency of every digit present within a given integer by reusing the logical checking function from Problem #8.
+<img width="602" height="227" alt="Solution_#Problem9" src="https://github.com/user-attachments/assets/3aee0ac6-b3db-4331-a761-ea8d7f906d67" />
