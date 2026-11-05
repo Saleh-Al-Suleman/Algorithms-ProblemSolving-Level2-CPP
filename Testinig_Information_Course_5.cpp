@@ -57,6 +57,20 @@ int ReadPositiveNumber(string Message)
     return num;
 }
 
+int ReadDigit()
+{
+    int digit = 0;
+    do {
+        cout << "Please enter digit for example [1]: ";
+        cin >> digit;
+
+        if (digit > 9)
+            digit = -1;
+
+    } while (digit <= -1);
+    return digit;
+}
+
 enPrimeNotPrime CheckPrime(int Number)
 {
     int m = round(Number / 2);
@@ -204,6 +218,20 @@ int ReverseNumber(int number)
     return newNum;
 }
 
+//#problem 8: DigitFrequency
+int CountTheDigit(int number, short digitToCheck)
+{
+    int count = 0, remender = 0;
+    while (number > 0)
+    {
+        remender = number % 10;
+        number /= 10;
+        if (remender == digitToCheck)
+            count++;
+    }
+    return count;
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -226,9 +254,16 @@ int main()
     //cout << "\n\tSum of digits: " << CalcDigitsOfSumNumbers(number);
     //cout << "\n-------------------------------------------------------------------" << endl;
 
-    // this the call with Problem 7 #ReverseNumber
-    int numtoReverse = ReadPositiveNumber("Please enter a number: ");
-    cout << "This is the reverse number [" << numtoReverse << "] is equal: [" << ReverseNumber(numtoReverse) << "].\n";
+    //// this the call with Problem 7 #ReverseNumber
+    //int numtoReverse = ReadPositiveNumber("Please enter a number: ");
+    //cout << "This is the reverse number [" << numtoReverse << "] is equal: [" << ReverseNumber(numtoReverse) << "].\n";
+    //cout << "-------------------------------------------------------------\n";
+
+    //this the call with problem 8 #DigitFrecuency
+    int NumberToCount = ReadPositiveNumber("Please enter number for example [11223344]: ");
+    int digitToCheck = ReadDigit();
+    cout << "\nThe Number [" << NumberToCount << "] has the digit [" << digitToCheck << "] Frequency is (";
+    cout << CountTheDigit(NumberToCount, digitToCheck) << ") Times(s)..." << endl;
     cout << "-------------------------------------------------------------\n";
     return 0;
 }
