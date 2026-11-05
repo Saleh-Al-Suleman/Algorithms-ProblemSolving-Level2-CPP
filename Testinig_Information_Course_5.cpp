@@ -232,6 +232,18 @@ int CountTheDigit(int number, short digitToCheck)
     return count;
 }
 
+//#Problem 9: DigitFrequencyPrintAll
+void PrintAllDigitsFrequency(int Number)
+{
+    cout << "\n";
+    for (int i = 0; i < 10; i++)
+    {
+        short DigitFrequency = CountTheDigit(Number, i);
+        if (DigitFrequency > 0)
+        cout << "\tDigit [" << i << "] Frequency is " << DigitFrequency << " Time(s)\n";
+    }
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -259,12 +271,17 @@ int main()
     //cout << "This is the reverse number [" << numtoReverse << "] is equal: [" << ReverseNumber(numtoReverse) << "].\n";
     //cout << "-------------------------------------------------------------\n";
 
-    //this the call with problem 8 #DigitFrecuency
-    int NumberToCount = ReadPositiveNumber("Please enter number for example [11223344]: ");
-    int digitToCheck = ReadDigit();
-    cout << "\nThe Number [" << NumberToCount << "] has the digit [" << digitToCheck << "] Frequency is (";
-    cout << CountTheDigit(NumberToCount, digitToCheck) << ") Times(s)..." << endl;
-    cout << "-------------------------------------------------------------\n";
+    ////this the call with problem 8 #DigitFrecuency
+    //int NumberToCount = ReadPositiveNumber("Please enter number for example [11223344]: ");
+    //int digitToCheck = ReadDigit();
+    //cout << "\nThe Number [" << NumberToCount << "] has the digit [" << digitToCheck << "] Frequency is (";
+    //cout << CountTheDigit(NumberToCount, digitToCheck) << ") Times(s)..." << endl;
+    //cout << "-------------------------------------------------------------\n";
+
+    //this the call with problem 9 #DigitFrecuencyPrintAll
+    cout << "----------------------------------------------\n";
+    PrintAllDigitsFrequency(ReadPositiveNumber("Please enter a number: "));
+    cout << "----------------------------------------------\n";
     return 0;
 }
 
