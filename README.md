@@ -36,3 +36,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 - **Problem #9:** Print All Digits Frequency - Displays the frequency of every digit present within a given integer by reusing the logical checking function from Problem #8.
 <img width="602" height="227" alt="Solution_#Problem9" src="https://github.com/user-attachments/assets/3aee0ac6-b3db-4331-a761-ea8d7f906d67" />
+
+- **Problem #10:** Print Digits in Order - Displays the digits of a given integer in their original, correct order by elegantly composing the `ReverseNumber` and `PrintDigits` functions from previous problems.
+<img width="963" height="201" alt="Solution_#Problem10" src="https://github.com/user-attachments/assets/aaf07258-a322-45e7-ba20-1a6dc2e5d493" />
