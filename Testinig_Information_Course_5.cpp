@@ -284,6 +284,21 @@ void PrintInvertedNumber(int number)
     }
 }
 
+//#Problem 13: NumberPattern
+void PrintNumberPattern(int number)
+{
+    
+    for (int i = 1; i <= number; i++)
+    {
+        cout << "\t";
+        for (int j = 1; j <= i; j++)
+        {
+            cout << i <<" ";
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -334,8 +349,12 @@ int main()
     cout << "----------------------------------------------\n";*/
 
     // this the call with problem 12 #InvertedNumberPattern
-    cout << "\n----------------------------------------------\n";
+    /*cout << "\n----------------------------------------------\n";
     PrintInvertedNumber(ReadPositiveNumber("Please enter a number: "));
+    cout << "\n----------------------------------------------\n";*/
+
+    cout << "\n----------------------------------------------\n\n";
+    PrintNumberPattern(ReadPositiveNumber("Please enter a number: "));
     cout << "\n----------------------------------------------\n";
 
     return 0;
