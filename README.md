@@ -50,3 +50,5 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #13:** Number Pattern - Displays a pyramid-shaped ascending pattern of numbers from 1 up to a user-defined input, utilizing structured nested loops to control row progression and column generation cleanly.
 <img width="606" height="449" alt="Solution_#Problem13" src="https://github.com/user-attachments/assets/5f3f9d05-e57f-44ae-ab79-ea01a7a5288d" />
 
+- **Problem #14:** Inverted Letter Pattern - Displays a pyramid-shaped inverted pattern of uppercase letters starting from the computed ASCII character down to 'A', utilizing optimized nested loops to control letter degradation.
+<img width="615" height="389" alt="Solution_#Problem14" src="https://github.com/user-attachments/assets/57160523-f503-4971-908c-36545ab24f7b" />
