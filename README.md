@@ -39,3 +39,9 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 - **Problem #10:** Print Digits in Order - Displays the digits of a given integer in their original, correct order by elegantly composing the `ReverseNumber` and `PrintDigits` functions from previous problems.
 <img width="963" height="201" alt="Solution_#Problem10" src="https://github.com/user-attachments/assets/aaf07258-a322-45e7-ba20-1a6dc2e5d493" />
+
+- **Problem #11:** Palindrome Number - Checks if a given positive integer is a Palindrome by creating a highly reusable logical function (`CheckIsPalindrome`) that directly compares the original number with its mathematical reverse.
+<img width="824" height="187" alt="Solution_#Problem11-1" src="https://github.com/user-attachments/assets/70e7c403-b5d6-4656-9a0f-b54ee370926d" />
+<img width="796" height="192" alt="Solution_#Problem11-2" src="https://github.com/user-attachments/assets/8dc75f37-e14c-44e4-b5b2-e5bd038b1151" />
+
+
