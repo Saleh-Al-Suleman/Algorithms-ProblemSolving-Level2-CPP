@@ -250,6 +250,25 @@ void PrintDigitsinOrder(int Number)
     PrintDigits(ReverseNumber(Number));
 }
 
+//#Problem 11: PalendromeNumber
+bool CheckIsPalindrome(int number)
+{
+    return number == ReverseNumber(number);
+}
+
+void PrintIsPalindromeThenNumber(int number)
+{
+    int reversedNumber = ReverseNumber(number);
+    if (CheckIsPalindrome(number))
+    {
+        cout << "Yes, the number [" << number << "] is palindrome thats equal: (" << reversedNumber << ").\n";
+    }
+    else
+    {
+        cout << "No, the number [" << number << "] is NOT palindrome thats equal: (" << reversedNumber << ").\n";
+    }
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -290,8 +309,12 @@ int main()
     //cout << "----------------------------------------------\n";
 
     // this the call with problem 10 #PrintDigits_in_Order
-    cout << "----------------------------------------------\n";
-    PrintDigitsinOrder(ReadPositiveNumber("Please enter a number: "));
+    //cout << "----------------------------------------------\n";
+    //PrintDigitsinOrder(ReadPositiveNumber("Please enter a number: "));
+    //cout << "----------------------------------------------\n";
+    
+    cout << "\n----------------------------------------------\n";
+    PrintIsPalindromeThenNumber(ReadPositiveNumber("Please enter a number: "));
     cout << "----------------------------------------------\n";
     return 0;
 }
