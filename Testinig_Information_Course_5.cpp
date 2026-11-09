@@ -302,8 +302,10 @@ void PrintNumberPattern(int number)
 //#Problem 14: Inverted letter pattern
 void PrintInvertedLetterPattern(int number)
 {
+    cout << "\n";
     for (int i = 65 + number - 1; i >= 65; i--)
     {
+        cout << "\t";
         for (int j = i; j >= 65; j--)
         {
             cout << (char)i << " ";
@@ -373,8 +375,10 @@ int main()
     //PrintNumberPattern(ReadPositiveNumber("Please enter a number: "));
     //cout << "\n----------------------------------------------\n";
 
-    //
-    PrintInvertedLetterPattern(5);
+    // this the call with problem 14 #InvertedLetterpPattern
+    cout << "\n----------------------------------------------\n\n";
+    PrintInvertedLetterPattern(ReadPositiveNumber("Please enter a number: "));
+    cout << "\n----------------------------------------------\n";
 
     return 0;
 }
