@@ -269,6 +269,21 @@ void PrintIsPalindromeThenNumber(int number)
     }
 }
 
+//#Problem 12: InvertedNumberPattern
+void PrintInvertedNumber(int number)
+{
+    cout << "\n";
+    for (int i = number; i > 0; i--)
+    {
+        cout << "\t";
+        for (int j = i; j > 0; j--)
+        {
+            cout << i << " ";
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -313,9 +328,16 @@ int main()
     //PrintDigitsinOrder(ReadPositiveNumber("Please enter a number: "));
     //cout << "----------------------------------------------\n";
     
-    cout << "\n----------------------------------------------\n";
+    // this the call with problem 11 #PalendromeNumber
+    /*cout << "\n----------------------------------------------\n";
     PrintIsPalindromeThenNumber(ReadPositiveNumber("Please enter a number: "));
-    cout << "----------------------------------------------\n";
+    cout << "----------------------------------------------\n";*/
+
+    // this the call with problem 12 #InvertedNumberPattern
+    cout << "\n----------------------------------------------\n";
+    PrintInvertedNumber(ReadPositiveNumber("Please enter a number: "));
+    cout << "\n----------------------------------------------\n";
+
     return 0;
 }
 
