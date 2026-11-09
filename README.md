@@ -44,4 +44,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 <img width="824" height="187" alt="Solution_#Problem11-1" src="https://github.com/user-attachments/assets/70e7c403-b5d6-4656-9a0f-b54ee370926d" />
 <img width="796" height="192" alt="Solution_#Problem11-2" src="https://github.com/user-attachments/assets/8dc75f37-e14c-44e4-b5b2-e5bd038b1151" />
 
+- **Problem #12:** Inverted Number Pattern - Displays a pyramid-shaped inverted pattern of numbers from a user-defined input down to 1, utilizing structured nested loops to control row degradation and column repetition cleanly.
+<img width="658" height="449" alt="Solution_#Problem12" src="https://github.com/user-attachments/assets/527ed92e-fe2a-45ff-a56d-27367f115145" />
 
