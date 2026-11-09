@@ -52,3 +52,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 - **Problem #14:** Inverted Letter Pattern - Displays a pyramid-shaped inverted pattern of uppercase letters starting from the computed ASCII character down to 'A', utilizing optimized nested loops to control letter degradation.
 <img width="615" height="389" alt="Solution_#Problem14" src="https://github.com/user-attachments/assets/57160523-f503-4971-908c-36545ab24f7b" />
+
+- **Problem #15:** Letter Pattern - Displays a pyramid-shaped ascending pattern of uppercase letters starting from 'A' up to the computed ASCII character, utilizing pre-calculated loop boundaries and structured nesting.
+<img width="622" height="329" alt="Solution_#Problem15" src="https://github.com/user-attachments/assets/d95fe87d-dd40-4ac2-be0c-75dadbd57902" />
