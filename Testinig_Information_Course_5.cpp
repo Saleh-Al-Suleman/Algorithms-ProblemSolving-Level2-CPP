@@ -299,6 +299,21 @@ void PrintNumberPattern(int number)
     }
 }
 
+//#Problem 14: Inverted letter pattern
+void PrintInvertedLetterPattern(int number)
+{
+    for (int i = 65 + number - 1; i >= 65; i--)
+    {
+        for (int j = i; j >= 65; j--)
+        {
+            cout << (char)i << " ";
+        }
+        cout << "\n";
+    }
+}
+
+
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -353,9 +368,13 @@ int main()
     PrintInvertedNumber(ReadPositiveNumber("Please enter a number: "));
     cout << "\n----------------------------------------------\n";*/
 
-    cout << "\n----------------------------------------------\n\n";
-    PrintNumberPattern(ReadPositiveNumber("Please enter a number: "));
-    cout << "\n----------------------------------------------\n";
+    // this the call with problem 13 #NumberPattern
+    //cout << "\n----------------------------------------------\n\n";
+    //PrintNumberPattern(ReadPositiveNumber("Please enter a number: "));
+    //cout << "\n----------------------------------------------\n";
+
+    //
+    PrintInvertedLetterPattern(5);
 
     return 0;
 }
