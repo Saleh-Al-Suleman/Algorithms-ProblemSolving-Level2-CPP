@@ -47,3 +47,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #12:** Inverted Number Pattern - Displays a pyramid-shaped inverted pattern of numbers from a user-defined input down to 1, utilizing structured nested loops to control row degradation and column repetition cleanly.
 <img width="658" height="449" alt="Solution_#Problem12" src="https://github.com/user-attachments/assets/527ed92e-fe2a-45ff-a56d-27367f115145" />
 
+- **Problem #13:** Number Pattern - Displays a pyramid-shaped ascending pattern of numbers from 1 up to a user-defined input, utilizing structured nested loops to control row progression and column generation cleanly.
+<img width="606" height="449" alt="Solution_#Problem13" src="https://github.com/user-attachments/assets/5f3f9d05-e57f-44ae-ab79-ea01a7a5288d" />
+
