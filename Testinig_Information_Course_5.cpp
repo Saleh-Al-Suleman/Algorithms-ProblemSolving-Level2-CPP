@@ -329,6 +329,36 @@ void PrintLetterPattern(int number)
     }
 }
 
+//#Problem 16: PrintAllWordsFromAAA_To_ZZZ:
+void PrintAllWordFromAAAToZZZ()
+{
+    const int WordsPerLine = 13;
+
+    for (int i = 65; i <= 90; i++)
+    {
+        cout << "\t====================================\n";
+        cout << "\t\tWORDS STARTING WITH '" << (char)i << "'\n";
+        cout << "\t====================================\n\n";
+
+        int wordCount = 0;
+
+        for (int j = 65; j <= 90; j++)
+        {
+            for (int k = 65; k <= 90; k++)
+            {
+                cout << (char)i << (char)j << (char)k << setw(6);
+
+                wordCount++;
+
+                if (wordCount % WordsPerLine == 0)
+                cout << "\n";
+            }
+            cout << "\n";
+        }
+
+    }
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -394,9 +424,11 @@ int main()
     cout << "\n----------------------------------------------\n";*/
 
 
-    cout << "\n----------------------------------------------\n\n";
+    /*cout << "\n----------------------------------------------\n\n";
     PrintLetterPattern(ReadPositiveNumber("Please enter a number: "));
-    cout << "\n----------------------------------------------\n";
+    cout << "\n----------------------------------------------\n";*/
+
+    PrintAllWordFromAAAToZZZ();
 
     return 0;
 }
