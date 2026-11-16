@@ -60,3 +60,5 @@ The goal of this repository is to practice core programming logic, optimize algo
   <img width="1184" height="1018" alt="Solution_#Problem16_1" src="https://github.com/user-attachments/assets/558fc867-a0ea-4dc7-be67-64cdaf838b4f" />
   <img width="1140" height="1024" alt="Solution_#Problem16_2" src="https://github.com/user-attachments/assets/ebb02130-8dc8-4a98-873a-69caeecca3e9" />
 
+- **Problem #17:** Guess a 3-Letter Password - Simulates a brute-force search to find a 3-uppercase-letter password using nested loops and ASCII character conversions.
+<img width="641" height="338" alt="Solution_#Problem17" src="https://github.com/user-attachments/assets/babc909d-bcc3-46cb-a425-e65afa4e59ae" />
