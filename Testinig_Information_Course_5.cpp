@@ -407,6 +407,25 @@ bool CheckPassword(string Password)
     return false;
 }
 
+//#Problem 18: Encrypt, Decrypt Text
+string EncryptText(string Text, short KeyEncrypt)
+{
+    for (int i = 0; i < Text.length(); i++)
+    {
+        Text[i] = char((int)Text[i] + KeyEncrypt);
+    }
+    return Text;
+}
+
+//# Decrypt Text
+string DecryptText(string TextEncrypted, short KeyDecrypt)
+{
+    for (int i = 0; i < TextEncrypted.length(); i++)
+    {
+        TextEncrypted[i] = char((int)TextEncrypted[i] - KeyDecrypt);
+    }
+    return TextEncrypted;
+}
 
 int main()
 {
@@ -480,9 +499,18 @@ int main()
     // this the call with problem 16 #PrintAllWordFromAAAToZZZ
     //PrintAllWordFromAAAToZZZ();
 
-    //this the call with problem 17 #Guess A 3-Letters Password
+    ////this the call with problem 17 #Guess A 3-Letters Password
+    //cout << "\n----------------------------------------------\n";
+    //CheckPassword(ReadString("Enter your Password: "));
+    //cout << "\n----------------------------------------------\n";
+
+
+    // this the call with problem 18 #Encrypt, Decrypt Text
     cout << "\n----------------------------------------------\n";
-    CheckPassword(ReadString("Enter your Password: "));
+    string password = "Admin",PassEncrypted = EncryptText(password, 3), PassDecrypted = DecryptText(PassEncrypted,3);
+    cout << "Before Encrypting: " << password << endl;
+    cout << "After Encrypting: " << PassEncrypted;
+    cout << "\nAfter Decrypting: " << PassDecrypted;
     cout << "\n----------------------------------------------\n";
 
     return 0;
