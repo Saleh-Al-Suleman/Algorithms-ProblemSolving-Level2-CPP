@@ -62,3 +62,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 - **Problem #17:** Guess a 3-Letter Password - Simulates a brute-force search to find a 3-uppercase-letter password using nested loops and ASCII character conversions.
 <img width="641" height="338" alt="Solution_#Problem17" src="https://github.com/user-attachments/assets/babc909d-bcc3-46cb-a425-e65afa4e59ae" />
+
+- **Problem #18:** Encrypt & Decrypt Text - Implements a Caesar-cipher style encryption and decryption system that returns newly processed strings using ASCII character manipulation.
+<img width="621" height="149" alt="solution_Problem#18" src="https://github.com/user-attachments/assets/ed5edc6d-a637-44b9-9ac9-99be73637a88" />
