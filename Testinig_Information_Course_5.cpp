@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include <iomanip>
 
 using namespace std;
@@ -45,6 +46,21 @@ void PrintMultipliactionTable()
 // Print All Prime Numbers From 1 to N
 
 enum enPrimeNotPrime { Prime = 1, NotPrime = 2 };
+
+string ReadString(string Message)
+{
+    string EnteredText;
+    
+    while(true)
+    {
+        cout << Message;
+        if (!getline(cin, EnteredText)) {
+            return "";
+        }
+        if (!EnteredText.empty())
+            return EnteredText;
+    }
+}
 
 int ReadPositiveNumber(string Message)
 {
@@ -359,6 +375,39 @@ void PrintAllWordFromAAAToZZZ()
     }
 }
 
+//#Problem 17: Guess A 3-Letters Password
+bool CheckPassword(string Password)
+{
+    int counter = 0;
+    string word = "";
+    for (int i = 65; i <= 90; i++)
+    {
+        for (int j = 65; j <= 90; j++)
+        {
+            for (int k = 65; k <= 90; k++)
+            {
+                word += (char)i;
+                word += (char)j;
+                word += (char)k;
+                
+                counter++;
+                cout << "Trial [" << counter << "]: " << word << "\n";
+
+                if (word == Password)
+                {
+                    cout << "\nPassword is " << word << "\n";
+                    cout << "Found after " << counter << " Trial(s)\n";
+
+                    return true;
+                }
+                word = "";
+            }
+        }
+    }
+    return false;
+}
+
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -423,12 +472,18 @@ int main()
     PrintInvertedLetterPattern(ReadPositiveNumber("Please enter a number: "));
     cout << "\n----------------------------------------------\n";*/
 
-
+    // this the call with problem 15 #PrintLetterPattern
     /*cout << "\n----------------------------------------------\n\n";
     PrintLetterPattern(ReadPositiveNumber("Please enter a number: "));
     cout << "\n----------------------------------------------\n";*/
+    
+    // this the call with problem 16 #PrintAllWordFromAAAToZZZ
+    //PrintAllWordFromAAAToZZZ();
 
-    PrintAllWordFromAAAToZZZ();
+    //this the call with problem 17 #Guess A 3-Letters Password
+    cout << "\n----------------------------------------------\n";
+    CheckPassword(ReadString("Enter your Password: "));
+    cout << "\n----------------------------------------------\n";
 
     return 0;
 }
