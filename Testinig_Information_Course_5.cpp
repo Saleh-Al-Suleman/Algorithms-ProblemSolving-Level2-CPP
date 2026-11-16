@@ -427,6 +427,13 @@ string DecryptText(string TextEncrypted, short KeyDecrypt)
     return TextEncrypted;
 }
 
+//#Problem 19: Random3NumbersFrom1To10
+int RandomNumber(int From, int To)
+{
+    int randNumber = rand() % (To - From + 1) + From;
+    return randNumber;
+}
+
 int main()
 {
     //// this the call with Problem one #Multipliaction
@@ -506,12 +513,22 @@ int main()
 
 
     // this the call with problem 18 #Encrypt, Decrypt Text
-    cout << "\n----------------------------------------------\n";
+    /*cout << "\n----------------------------------------------\n";
     string password = "Admin",PassEncrypted = EncryptText(password, 3), PassDecrypted = DecryptText(PassEncrypted,3);
     cout << "Before Encrypting: " << password << endl;
     cout << "After Encrypting: " << PassEncrypted;
     cout << "\nAfter Decrypting: " << PassDecrypted;
-    cout << "\n----------------------------------------------\n";
+    cout << "\n----------------------------------------------\n";*/
+
+    // this the call with problem 19: Randome Number From 1 To 10
+    
+    srand((unsigned)time(NULL));
+    
+    cout << "====================================\n";
+    cout << "\t[" << RandomNumber(1, 10);
+    cout << "\t" << RandomNumber(1, 10);
+    cout << "\t" << RandomNumber(1, 10);
+    cout << "]\n====================================\n";
 
     return 0;
 }
