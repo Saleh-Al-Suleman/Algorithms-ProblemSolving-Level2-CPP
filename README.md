@@ -1,5 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/674d5b37-343f-4ac8-969f-dbd31213d6cf" /># Algorithms & Problem Solving - Level 2 (C++)
-
 This repository contains my solutions and implementations for the **Algorithms & Problem Solving Level 2** course. 
 
 ## 🎯 Purpose
