@@ -569,6 +569,17 @@ int MinValueInArray(int array[100], short length)
     return min;
 }
 
+//#Problem 26: Sum of Random Array
+int SumValuesInArray(int array[100], short length)
+{
+    int sum = array[0];
+    for (short i = 1; i < length; i++)
+    {
+        sum += array[i];
+    }
+    return sum;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -718,16 +729,24 @@ int main()
     cout << "\n=======================================================\n";*/
 
     //this thew call with problem 25: Min Random Array
-    
-    cout << "\n================== PROBLEM 25 =========================\n\n";
+    /*cout << "\n================== PROBLEM 25 =========================\n\n";
     short length = ReadLengthArrayOf100();
     int array[100];
     FillArrayWithRandomNumbers(array, length);
     PrintArrayElements(array, length);
 
     cout << "Min number is: " << MinValueInArray(array, length);
-    cout << "\n=======================================================\n";
+    cout << "\n=======================================================\n";*/
 
+    //this the call with problem 26: Sum Random Array
+    cout << "\n================== PROBLEM 26 =========================\n\n";
+    short length = ReadLengthArrayOf100();
+    int array[100];
+    FillArrayWithRandomNumbers(array, length);
+    PrintArrayElements(array, length);
+
+    cout << "Sum values is: " << SumValuesInArray(array, length);
+    cout << "\n=======================================================\n";
 
     return 0;
 }
