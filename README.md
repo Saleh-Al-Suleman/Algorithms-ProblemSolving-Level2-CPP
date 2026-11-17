@@ -109,3 +109,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #29:** Copy Only Prime Numbers - Filters and copies prime numbers from a source array into a new destination array while dynamically tracking the resulting array length via pass-by-reference (`&`).
 
   <img width="730" height="476" alt="Solution_Problem#29" src="https://github.com/user-attachments/assets/d0dcb18a-3035-4e71-acaf-ad5639d4e3a4" />
+
+- **Problem #30:** Sum of 2 Arrays to a Third One - Calculates the element-wise sum of two randomly populated arrays and stores the results in a third destination array using a single linear pass ($O(n)$).
+
+  <img width="742" height="669" alt="Solution_Problem#30" src="https://github.com/user-attachments/assets/e574d610-68c5-45a1-a79c-673f5a5b962d" />
