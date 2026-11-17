@@ -458,6 +458,85 @@ char GetRandomCharacter(enCharType charType)
     }
 }
 
+//#Problem 21: GenerateKeys
+string GeneratePacetKey(short countDigit)
+{
+    string PacetKey;
+
+    for (int i = 1; i <= countDigit; i++)
+    {
+        PacetKey += GetRandomCharacter(enCharType::CapitalLetter);
+    }
+    return PacetKey;
+}
+
+string GenerateOneKey(short countPacetKey = 4)
+{
+    string key = "";
+    for (int i = 1; i <= countPacetKey; i++)
+    {
+        key += GeneratePacetKey(4);
+        if (i < countPacetKey)
+            key += '-';
+    }
+    return key;
+}
+void GenerateKeys(short NumberOfKeys)
+{
+    cout << "\n";
+    for (int i = 1; i <= NumberOfKeys; i++)
+    {
+        cout << "Key [" << i << "]: " << GenerateOneKey() << "\n";
+    }
+}
+
+//#Problem 22: Repeated Elements Count In Array
+void FillElementsOfArray(int Array[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        cout << "Please Enter Element [" << i + 1 << "]: ";
+        cin >> Array[i];
+    }
+}
+
+void PrintArrayElements(int Array[100],short length)
+{
+    cout << "\nArray Elements: ";
+    for (short i = 0; i < length; i++)
+    {
+        cout << Array[i]<<" ";
+    }
+    cout << "\n\n";
+}
+
+short CountRepeatedElementInArray(int Array[100], short length, int number)
+{
+    short int counter = 0;
+    for (int i = 0; i < length; i++)
+    {
+        if (Array[i] == number)
+            counter++;
+    }
+    return counter;
+}
+
+short ReadLengthArrayOf100()
+{
+    short length = 0;
+    do 
+    {
+        length = ReadPositiveNumber("Please Enter How Numbers You Want to Enter: ");
+        if (length > 100)
+        {
+            cout << "\n\tERROR\nEnter Number Under (100)\n";
+        }
+    } while (length > 100);
+ 
+    return length;
+}
+
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -556,13 +635,34 @@ int main()
     cout << "]\n====================================\n";*/
 
     //this the call with problem 20: Random_Small_Capital_Letter
-    cout << "====================================\n";
+    /*cout << "====================================\n";
     cout << "Random Capital Letter: " << GetRandomCharacter(enCharType::CapitalLetter) << "\n";
     cout << "Random Small Letter: " << GetRandomCharacter(enCharType::SmallLetter) << "\n";
     cout << "Random Special Letter: " << GetRandomCharacter(enCharType::SpecialLetter) << "\n";
     cout << "Random Digit Letter: " << GetRandomCharacter(enCharType::Digit) << "\n";
-    cout << "====================================\n";
+    cout << "====================================\n";*/
 
+    //this the call with problem 21: GenerateKeys
+    cout << "\n================== [KEYS] =========================\n\n";
+    int NumOfKeys = ReadPositiveNumber("Please enter number of keys: ");
+    GenerateKeys(NumOfKeys);
+    cout << "\n====================================================\n";
+
+    //Only Testing
+    // 
+    ////this the call with problem 22: Repeated Elements Count In Array
+    //cout << "\n================== PROBLEM 22 =========================\n\n";
+    //int numOfInput = ReadLengthArrayOf100();
+    //int Array[100];
+
+    //FillElementsOfArray(Array, numOfInput);
+    //PrintArrayElements(Array, numOfInput);
+
+    //int numberOfCount = ReadPositiveNumber("Please Enter The Number You Want to Count: ");
+
+    //cout << "\nThe number (" << numberOfCount << ") was repated: " << CountRepeatedElementInArray(Array, numOfInput, numberOfCount) << " time(s).\n";
+
+    //cout << "\n========================================================\n";
     return 0;
 }
 
