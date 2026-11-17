@@ -77,3 +77,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #21:** Generate Keys - Generates a user-specified number of formatted random activation keys (e.g., `XXXX-XXXX-XXXX-XXXX`) using modular functions and default parameters.
 
   <img width="683" height="385" alt="Solution_Problem#21" src="https://github.com/user-attachments/assets/b3a498dd-4732-4ca0-95f5-99d01acd8f72" />
+
+- **Problem #22:** Repeated Elements Count in Array - Reads a validated array of integers, displays its elements, and counts how many times a specific target number occurs using modular array utility functions.
+
+  <img width="762" height="542" alt="Solution_Problem#22" src="https://github.com/user-attachments/assets/fef35ea0-0159-41f3-9c43-10de9d77263e" />
