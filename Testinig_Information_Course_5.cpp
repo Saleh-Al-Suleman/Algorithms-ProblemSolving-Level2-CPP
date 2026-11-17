@@ -598,6 +598,7 @@ void CopyArray(const int array1[100], int array2[100], short length)
 //#Problem 29: Copy Only Prime Numbers
 void CopyOnlyPrimeNumbers(int array1[100], int array2[100], short length,short &array2Length)
 {
+    array2Length = 0;
     for (short i = 0; i < length; i++)
     {
         if (CheckPrime(array1[i]) == enPrimeNotPrime::Prime)
@@ -608,6 +609,14 @@ void CopyOnlyPrimeNumbers(int array1[100], int array2[100], short length,short &
     }
 }
 
+//#Problem 30: Sum_of_2_Arrays_to_A_ThirdOne
+void Sum_of_2_Arrays_to_a_Third_One(int array1[100], int array2[100], int array3Result[100], short arrlength)
+{
+    for (short i = 0; i < arrlength; i++)
+    {
+        array3Result[i] = array1[i] + array2[i];
+    }
+}
 
 int main()
 {
@@ -802,7 +811,7 @@ int main()
     cout << "\n=======================================================\n";*/
     
     //this the call with problem 29: CopyOnlyPrimeNumber
-    cout << "\n================== PROBLEM 29 =========================\n\n";
+    /*cout << "\n================== PROBLEM 29 =========================\n\n";
     short lengthArr1 = ReadLengthArrayOf100();
     short lengthArr2 = 0;
     int array1[100], array2[100];
@@ -814,6 +823,24 @@ int main()
     CopyOnlyPrimeNumbers(array1, array2, lengthArr1, lengthArr2);
     cout << "\t-----------------\n\t   Array 2:\n\t-----------------\n";
     PrintArrayElements(array2, lengthArr2);
+    cout << "\n=======================================================\n";*/
+
+    //this the call with problem 30: Sum_of_2_Arrays_to_A_ThirdOne
+    cout << "\n================== PROBLEM 30 =========================\n\n";
+    short lengthArr1 = ReadLengthArrayOf100();
+    int array1[100], array2[100], array3[100];
+
+    FillArrayWithRandomNumbers(array1, lengthArr1);
+    cout << "\t-----------------\n\t   Array 1:\n\t-----------------\n";
+    PrintArrayElements(array1, lengthArr1);
+
+    FillArrayWithRandomNumbers(array2, lengthArr1);
+    cout << "\t-----------------\n\t   Array 2:\n\t-----------------\n";
+    PrintArrayElements(array2, lengthArr1);
+    
+    Sum_of_2_Arrays_to_a_Third_One(array1, array2, array3, lengthArr1);
+    cout << "\t-----------------\n\t   Array 3:\n\t-----------------\n";
+    PrintArrayElements(array3, lengthArr1);
     cout << "\n=======================================================\n";
 
     return 0;
