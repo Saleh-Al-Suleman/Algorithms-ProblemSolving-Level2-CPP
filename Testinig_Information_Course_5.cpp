@@ -557,6 +557,18 @@ int MaxValueInArray(int array[100], short length)
     return max;
 }
 
+//#Problem 25: Min Random Array
+int MinValueInArray(int array[100], short length)
+{
+    int min = array[0];
+    for (short i = 1; i < length; i++)
+    {
+        if (array[i] < min)
+            min = array[i];
+    }
+    return min;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -694,8 +706,8 @@ int main()
     PrintArrayElements(array, length);
     cout << "========================================================\n";*/
     
-    //this the call with problem 23: Max Of Random Array
-    cout << "\n================== PROBLEM 23 =========================\n\n";
+    //this the call with problem 24: Max Of Random Array
+    /*cout << "\n================== PROBLEM 24 =========================\n\n";
     int array[100];
     short length = ReadLengthArrayOf100();
 
@@ -703,7 +715,20 @@ int main()
     PrintArrayElements(array, length);
     cout << "Max number is: " << MaxValueInArray(array, length);
 
+    cout << "\n=======================================================\n";*/
+
+    //this thew call with problem 25: Min Random Array
+    
+    cout << "\n================== PROBLEM 25 =========================\n\n";
+    short length = ReadLengthArrayOf100();
+    int array[100];
+    FillArrayWithRandomNumbers(array, length);
+    PrintArrayElements(array, length);
+
+    cout << "Min number is: " << MinValueInArray(array, length);
     cout << "\n=======================================================\n";
+
+
     return 0;
 }
 
