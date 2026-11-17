@@ -101,3 +101,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #27:** Average of Random Array - Calculates and returns the exact floating-point average of array elements by reusing the `SumValuesInArray` function from Problem #26.
 
   <img width="966" height="231" alt="Solution_Problem#27" src="https://github.com/user-attachments/assets/cf9a8108-cf0b-4bdd-9676-7a4a7c2d990c" />
+
+- **Problem #28:** Copy Array - Copies all elements from a source array to a destination array of user-defined size using a linear pass ($O(n)$) and reuses array generation and printing utilities.
+
+  <img width="841" height="399" alt="Solution_Problem#28" src="https://github.com/user-attachments/assets/626a1212-02df-411d-a0db-df9adf75ef4e" />
