@@ -90,3 +90,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 
   <img width="726" height="250" alt="Solution_Problem#24" src="https://github.com/user-attachments/assets/4fa8e4b9-7f1f-4042-a0ed-93448fbc297d" />
 
+- **Problem #25:** Min of Random Array - Finds and returns the minimum integer within a randomly populated array using an optimized single linear pass ($O(n)$ time complexity).
+
+  <img width="737" height="249" alt="Solution_Problem#25" src="https://github.com/user-attachments/assets/39623f8e-2d9b-4c92-9916-2209bda4972e" />
