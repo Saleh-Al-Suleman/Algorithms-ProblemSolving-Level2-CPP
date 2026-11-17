@@ -1,4 +1,4 @@
-# Algorithms & Problem Solving - Level 2 (C++)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/674d5b37-343f-4ac8-969f-dbd31213d6cf" /># Algorithms & Problem Solving - Level 2 (C++)
 
 This repository contains my solutions and implementations for the **Algorithms & Problem Solving Level 2** course. 
 
@@ -75,3 +75,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #20:** Random Character Generator - Generates random small letters, capital letters, special characters, or digits by combining an `enum`-based `switch` statement with the `RandomNumber` function and ASCII ranges.
 
   <img width="573" height="180" alt="solution_Problem#20" src="https://github.com/user-attachments/assets/c3d15622-22b2-4361-9840-a65dc3b6b92a" />
+
+- **Problem #21:** Generate Keys - Generates a user-specified number of formatted random activation keys (e.g., `XXXX-XXXX-XXXX-XXXX`) using modular functions and default parameters.
+
+  <img width="683" height="385" alt="Solution_Problem#21" src="https://github.com/user-attachments/assets/b3a498dd-4732-4ca0-95f5-99d01acd8f72" />
