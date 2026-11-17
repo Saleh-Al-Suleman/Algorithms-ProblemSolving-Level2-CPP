@@ -434,49 +434,75 @@ int RandomNumber(int From, int To)
     return randNumber;
 }
 
+//#Problem 20: Random_Small_Capital_Letter
+enum enCharType { SmallLetter = 1, CapitalLetter = 2, SpecialLetter = 3, Digit = 4 };
+
+char GetRandomCharacter(enCharType charType)
+{
+    switch (charType)
+    {
+    case enCharType::SmallLetter:
+        return (char)RandomNumber(97, 122);
+
+    case enCharType::CapitalLetter:
+        return (char)RandomNumber(65, 90);
+
+    case enCharType::SpecialLetter:
+        return (char)RandomNumber(33, 47);
+
+    case enCharType::Digit:
+        return (char)RandomNumber(48, 57);
+
+    default:
+            return 'N';
+    }
+}
+
 int main()
 {
+    srand((unsigned)time(NULL));
+
     //// this the call with Problem one #Multipliaction
-    //PrintMultipliactionTable();
+    /*PrintMultipliactionTable();*/
 
     //// this the call with Problem two #PrintPrimeNumberFrom1ToN
-    //PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));
+    /*PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number: "));*/
 
     //// this the call with Problem Three #PrintPerfectNumberOrNot
-    //PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));
+    /*PrintIsPerfectNumber(ReadPositiveNumber("Please enter a positive number: "));*/
 
     //// this the call with problem four #PrintPerfectnumbersFromOneToN
-    //PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "));
+    /*PrintPerfectNumbersFromOneToN(ReadPositiveNumber("Please enter a positive number: "))*/
 
     ////this the call with Problem 5 #PrintDigits_in_aReversed Order
     //PrintDigits(ReadPositiveNumber("Please enter a number: "));
 
     ////this the call with problem 6 #SumOfDigits
-    //int number = ReadPositiveNumber("Please enter a number: ");
-    //cout << "\n\tSum of digits: " << CalcDigitsOfSumNumbers(number);
-    //cout << "\n-------------------------------------------------------------------" << endl;
+    /*int number = ReadPositiveNumber("Please enter a number: ");
+    cout << "\n\tSum of digits: " << CalcDigitsOfSumNumbers(number);
+    cout << "\n-------------------------------------------------------------------" << endl;*/
 
     //// this the call with Problem 7 #ReverseNumber
-    //int numtoReverse = ReadPositiveNumber("Please enter a number: ");
-    //cout << "This is the reverse number [" << numtoReverse << "] is equal: [" << ReverseNumber(numtoReverse) << "].\n";
-    //cout << "-------------------------------------------------------------\n";
+   /* int numtoReverse = ReadPositiveNumber("Please enter a number: ");
+    cout << "This is the reverse number [" << numtoReverse << "] is equal: [" << ReverseNumber(numtoReverse) << "].\n";
+    cout << "-------------------------------------------------------------\n";*/
 
     ////this the call with problem 8 #DigitFrecuency
-    //int NumberToCount = ReadPositiveNumber("Please enter number for example [11223344]: ");
-    //int digitToCheck = ReadDigit();
-    //cout << "\nThe Number [" << NumberToCount << "] has the digit [" << digitToCheck << "] Frequency is (";
-    //cout << CountTheDigit(NumberToCount, digitToCheck) << ") Times(s)..." << endl;
-    //cout << "-------------------------------------------------------------\n";
+   /* int NumberToCount = ReadPositiveNumber("Please enter number for example [11223344]: ");
+    int digitToCheck = ReadDigit();
+    cout << "\nThe Number [" << NumberToCount << "] has the digit [" << digitToCheck << "] Frequency is (";
+    cout << CountTheDigit(NumberToCount, digitToCheck) << ") Times(s)..." << endl;
+    cout << "-------------------------------------------------------------\n";*/
 
     ////this the call with problem 9 #DigitFrecuencyPrintAll
-    //cout << "----------------------------------------------\n";
-    //PrintAllDigitsFrequency(ReadPositiveNumber("Please enter a number: "));
-    //cout << "----------------------------------------------\n";
+    /*cout << "----------------------------------------------\n";
+    PrintAllDigitsFrequency(ReadPositiveNumber("Please enter a number: "));
+    cout << "----------------------------------------------\n";*/
 
     // this the call with problem 10 #PrintDigits_in_Order
-    //cout << "----------------------------------------------\n";
-    //PrintDigitsinOrder(ReadPositiveNumber("Please enter a number: "));
-    //cout << "----------------------------------------------\n";
+    /*cout << "----------------------------------------------\n";
+    PrintDigitsinOrder(ReadPositiveNumber("Please enter a number: "));
+    cout << "----------------------------------------------\n";*/
     
     // this the call with problem 11 #PalendromeNumber
     /*cout << "\n----------------------------------------------\n";
@@ -489,9 +515,9 @@ int main()
     cout << "\n----------------------------------------------\n";*/
 
     // this the call with problem 13 #NumberPattern
-    //cout << "\n----------------------------------------------\n\n";
-    //PrintNumberPattern(ReadPositiveNumber("Please enter a number: "));
-    //cout << "\n----------------------------------------------\n";
+    /*cout << "\n----------------------------------------------\n\n";
+    PrintNumberPattern(ReadPositiveNumber("Please enter a number: "));
+    cout << "\n----------------------------------------------\n";*/
 
     // this the call with problem 14 #InvertedLetterpPattern
     /*cout << "\n----------------------------------------------\n\n";
@@ -504,12 +530,14 @@ int main()
     cout << "\n----------------------------------------------\n";*/
     
     // this the call with problem 16 #PrintAllWordFromAAAToZZZ
+    
     //PrintAllWordFromAAAToZZZ();
+    //
 
     ////this the call with problem 17 #Guess A 3-Letters Password
-    //cout << "\n----------------------------------------------\n";
-    //CheckPassword(ReadString("Enter your Password: "));
-    //cout << "\n----------------------------------------------\n";
+    /*cout << "\n----------------------------------------------\n";
+    CheckPassword(ReadString("Enter your Password: "));
+    cout << "\n----------------------------------------------\n";*/
 
 
     // this the call with problem 18 #Encrypt, Decrypt Text
@@ -521,14 +549,19 @@ int main()
     cout << "\n----------------------------------------------\n";*/
 
     // this the call with problem 19: Randome Number From 1 To 10
-    
-    srand((unsigned)time(NULL));
-    
-    cout << "====================================\n";
+    /*cout << "====================================\n";
     cout << "\t[" << RandomNumber(1, 10);
     cout << "\t" << RandomNumber(1, 10);
     cout << "\t" << RandomNumber(1, 10);
-    cout << "]\n====================================\n";
+    cout << "]\n====================================\n";*/
+
+    //this the call with problem 20: Random_Small_Capital_Letter
+    cout << "====================================\n";
+    cout << "Random Capital Letter: " << GetRandomCharacter(enCharType::CapitalLetter) << "\n";
+    cout << "Random Small Letter: " << GetRandomCharacter(enCharType::SmallLetter) << "\n";
+    cout << "Random Special Letter: " << GetRandomCharacter(enCharType::SpecialLetter) << "\n";
+    cout << "Random Digit Letter: " << GetRandomCharacter(enCharType::Digit) << "\n";
+    cout << "====================================\n";
 
     return 0;
 }
