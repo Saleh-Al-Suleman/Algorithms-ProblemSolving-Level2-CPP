@@ -536,6 +536,15 @@ short ReadLengthArrayOf100()
     return length;
 }
 
+//#Problem 23: Fill Array With Random Numbers From 1 To 100
+void FillArrayWithRandomNumbers(int array[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        array[i] = RandomNumber(1, 100);
+    }
+}
+
 
 int main()
 {
@@ -649,7 +658,7 @@ int main()
     cout << "\n====================================================\n";*/
 
     //this the call with problem 22: Repeated Elements Count In Array
-    cout << "\n================== PROBLEM 22 =========================\n\n";
+   /* cout << "\n================== PROBLEM 22 =========================\n\n";
     int numOfInput = ReadLengthArrayOf100();
     int Array[100];
 
@@ -660,7 +669,19 @@ int main()
 
     cout << "\nThe number (" << numberOfCount << ") was repated: " << CountRepeatedElementInArray(Array, numOfInput, numberOfCount) << " time(s).\n";
 
-    cout << "\n========================================================\n";
+    cout << "\n========================================================\n";*/
+
+    //this the call with problem 23: Fill Array With Random Numbers From 1 To 100
+
+    cout << "\n================== PROBLEM 23 =========================\n\n";
+    int array[100];
+
+    short length = ReadLengthArrayOf100();
+
+    FillArrayWithRandomNumbers(array, length);
+
+    PrintArrayElements(array, length);
+    cout << "========================================================\n";
 
     return 0;
 }
