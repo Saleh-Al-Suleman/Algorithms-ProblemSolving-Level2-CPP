@@ -86,3 +86,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 
   <img width="741" height="205" alt="Solution_Problem#23" src="https://github.com/user-attachments/assets/c0f6cfe4-648e-4c1e-916a-6d1a0199f85b" />
 
+- **Problem #24:** Max of Random Array - Finds and returns the maximum integer within a randomly populated array using a single linear pass ($O(n)$ time complexity).
+
+  <img width="726" height="250" alt="Solution_Problem#24" src="https://github.com/user-attachments/assets/4fa8e4b9-7f1f-4042-a0ed-93448fbc297d" />
+
