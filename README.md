@@ -93,3 +93,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #25:** Min of Random Array - Finds and returns the minimum integer within a randomly populated array using an optimized single linear pass ($O(n)$ time complexity).
 
   <img width="737" height="249" alt="Solution_Problem#25" src="https://github.com/user-attachments/assets/39623f8e-2d9b-4c92-9916-2209bda4972e" />
+
+- **Problem #26:** Sum of Random Array - Calculates and returns the total sum of all elements within a randomly populated array using a single linear pass ($O(n)$ time complexity).
+
+  <img width="749" height="229" alt="Solution_Problem#26" src="https://github.com/user-attachments/assets/9543fb6e-4fcb-45f9-a8d3-8a0630c78e94" />
