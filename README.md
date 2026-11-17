@@ -71,3 +71,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #19:** Random 3 Numbers From 1 to 10 - Generates and displays three random integers within a specified range using a reusable `RandomNumber(From, To)` function seeded with system time.
   
   <img width="491" height="89" alt="solution_Problem#19" src="https://github.com/user-attachments/assets/801a3e90-1e71-4319-9052-9b6dc8bf7de6" />
+
+- **Problem #20:** Random Character Generator - Generates random small letters, capital letters, special characters, or digits by combining an `enum`-based `switch` statement with the `RandomNumber` function and ASCII ranges.
+
+  <img width="573" height="180" alt="solution_Problem#20" src="https://github.com/user-attachments/assets/c3d15622-22b2-4361-9840-a65dc3b6b92a" />
