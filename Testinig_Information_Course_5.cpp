@@ -586,6 +586,16 @@ float AverageValuesInArray(int array[100], short length)
     return (float)SumValuesInArray(array, length) / length;
 }
 
+//#Problem 28: CopyArray
+void CopyArray(const int array1[100], int array2[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        array2[i] = array1[i];
+    }
+}
+
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -755,13 +765,27 @@ int main()
     cout << "\n=======================================================\n";*/
     
     //this the call with problem 27: Average Random Array
-    cout << "\n================== PROBLEM 27 =========================\n\n";
+    /*cout << "\n================== PROBLEM 27 =========================\n\n";
     short length = ReadLengthArrayOf100();
     int array[100];
     FillArrayWithRandomNumbers(array, length);
     PrintArrayElements(array, length);
 
     cout << "Average values is: " << AverageValuesInArray(array, length);
+    cout << "\n=======================================================\n";*/
+
+    //thi sthe call with problem 28: Copy Array
+    cout << "\n================== PROBLEM 28 =========================\n\n";
+    short length = ReadLengthArrayOf100();
+    int array1[100], array2[100];
+
+    FillArrayWithRandomNumbers(array1, length);
+
+    PrintArrayElements(array1, length);
+
+    CopyArray(array1, array2, length);
+    cout << "\t-----------------\n\t   Array 2:\n\t-----------------\n";
+    PrintArrayElements(array2, length);
     cout << "\n=======================================================\n";
 
     return 0;
