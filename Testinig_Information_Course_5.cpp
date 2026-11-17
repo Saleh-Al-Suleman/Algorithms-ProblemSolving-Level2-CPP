@@ -595,6 +595,19 @@ void CopyArray(const int array1[100], int array2[100], short length)
     }
 }
 
+//#Problem 29: Copy Only Prime Numbers
+void CopyOnlyPrimeNumbers(int array1[100], int array2[100], short length,short &array2Length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        if (CheckPrime(array1[i]) == enPrimeNotPrime::Prime)
+        {
+            array2[array2Length] = array1[i];
+            array2Length++;;
+        }
+    }
+}
+
 
 int main()
 {
@@ -774,8 +787,8 @@ int main()
     cout << "Average values is: " << AverageValuesInArray(array, length);
     cout << "\n=======================================================\n";*/
 
-    //thi sthe call with problem 28: Copy Array
-    cout << "\n================== PROBLEM 28 =========================\n\n";
+    //thi the call with problem 28: Copy Array
+    /*cout << "\n================== PROBLEM 28 =========================\n\n";
     short length = ReadLengthArrayOf100();
     int array1[100], array2[100];
 
@@ -786,6 +799,21 @@ int main()
     CopyArray(array1, array2, length);
     cout << "\t-----------------\n\t   Array 2:\n\t-----------------\n";
     PrintArrayElements(array2, length);
+    cout << "\n=======================================================\n";*/
+    
+    //this the call with problem 29: CopyOnlyPrimeNumber
+    cout << "\n================== PROBLEM 29 =========================\n\n";
+    short lengthArr1 = ReadLengthArrayOf100();
+    short lengthArr2 = 0;
+    int array1[100], array2[100];
+
+    FillArrayWithRandomNumbers(array1, lengthArr1);
+    cout << "\t-----------------\n\t   Array 1:\n\t-----------------\n";
+    PrintArrayElements(array1, lengthArr1);
+
+    CopyOnlyPrimeNumbers(array1, array2, lengthArr1, lengthArr2);
+    cout << "\t-----------------\n\t   Array 2:\n\t-----------------\n";
+    PrintArrayElements(array2, lengthArr2);
     cout << "\n=======================================================\n";
 
     return 0;
