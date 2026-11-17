@@ -643,26 +643,25 @@ int main()
     cout << "====================================\n";*/
 
     //this the call with problem 21: GenerateKeys
-    cout << "\n================== [KEYS] =========================\n\n";
+    /*cout << "\n================== [KEYS] =========================\n\n";
     int NumOfKeys = ReadPositiveNumber("Please enter number of keys: ");
     GenerateKeys(NumOfKeys);
-    cout << "\n====================================================\n";
+    cout << "\n====================================================\n";*/
 
-    //Only Testing
-    // 
-    ////this the call with problem 22: Repeated Elements Count In Array
-    //cout << "\n================== PROBLEM 22 =========================\n\n";
-    //int numOfInput = ReadLengthArrayOf100();
-    //int Array[100];
+    //this the call with problem 22: Repeated Elements Count In Array
+    cout << "\n================== PROBLEM 22 =========================\n\n";
+    int numOfInput = ReadLengthArrayOf100();
+    int Array[100];
 
-    //FillElementsOfArray(Array, numOfInput);
-    //PrintArrayElements(Array, numOfInput);
+    FillElementsOfArray(Array, numOfInput);
+    PrintArrayElements(Array, numOfInput);
 
-    //int numberOfCount = ReadPositiveNumber("Please Enter The Number You Want to Count: ");
+    int numberOfCount = ReadPositiveNumber("Please Enter The Number You Want to Count: ");
 
-    //cout << "\nThe number (" << numberOfCount << ") was repated: " << CountRepeatedElementInArray(Array, numOfInput, numberOfCount) << " time(s).\n";
+    cout << "\nThe number (" << numberOfCount << ") was repated: " << CountRepeatedElementInArray(Array, numOfInput, numberOfCount) << " time(s).\n";
 
-    //cout << "\n========================================================\n";
+    cout << "\n========================================================\n";
+
     return 0;
 }
 
