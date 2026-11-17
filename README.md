@@ -81,3 +81,8 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #22:** Repeated Elements Count in Array - Reads a validated array of integers, displays its elements, and counts how many times a specific target number occurs using modular array utility functions.
 
   <img width="762" height="542" alt="Solution_Problem#22" src="https://github.com/user-attachments/assets/fef35ea0-0159-41f3-9c43-10de9d77263e" />
+
+  - **Problem #23:** Fill Array With Random Numbers - Populates an array of user-defined size with random integers between 1 and 100 by reusing validation, random generation, and array printing utilities.
+
+  <img width="741" height="205" alt="Solution_Problem#23" src="https://github.com/user-attachments/assets/c0f6cfe4-648e-4c1e-916a-6d1a0199f85b" />
+
