@@ -545,6 +545,17 @@ void FillArrayWithRandomNumbers(int array[100], short length)
     }
 }
 
+//#Problem 24: MAX Of Random Array
+int MaxValueInArray(int array[100], short length)
+{
+    int max = array[0];
+    for (short i = 1; i < length; i++)
+    {
+        if (array[i] > max)
+            max = array[i];
+    }
+    return max;
+}
 
 int main()
 {
@@ -673,7 +684,7 @@ int main()
 
     //this the call with problem 23: Fill Array With Random Numbers From 1 To 100
 
-    cout << "\n================== PROBLEM 23 =========================\n\n";
+    /*cout << "\n================== PROBLEM 23 =========================\n\n";
     int array[100];
 
     short length = ReadLengthArrayOf100();
@@ -681,8 +692,18 @@ int main()
     FillArrayWithRandomNumbers(array, length);
 
     PrintArrayElements(array, length);
-    cout << "========================================================\n";
+    cout << "========================================================\n";*/
+    
+    //this the call with problem 23: Max Of Random Array
+    cout << "\n================== PROBLEM 23 =========================\n\n";
+    int array[100];
+    short length = ReadLengthArrayOf100();
 
+    FillArrayWithRandomNumbers(array, length);
+    PrintArrayElements(array, length);
+    cout << "Max number is: " << MaxValueInArray(array, length);
+
+    cout << "\n=======================================================\n";
     return 0;
 }
 
