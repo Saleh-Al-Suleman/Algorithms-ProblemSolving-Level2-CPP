@@ -105,3 +105,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #28:** Copy Array - Copies all elements from a source array to a destination array of user-defined size using a linear pass ($O(n)$) and reuses array generation and printing utilities.
 
   <img width="841" height="399" alt="Solution_Problem#28" src="https://github.com/user-attachments/assets/626a1212-02df-411d-a0db-df9adf75ef4e" />
+
+- **Problem #29:** Copy Only Prime Numbers - Filters and copies prime numbers from a source array into a new destination array while dynamically tracking the resulting array length via pass-by-reference (`&`).
+
+  <img width="730" height="476" alt="Solution_Problem#29" src="https://github.com/user-attachments/assets/d0dcb18a-3035-4e71-acaf-ad5639d4e3a4" />
