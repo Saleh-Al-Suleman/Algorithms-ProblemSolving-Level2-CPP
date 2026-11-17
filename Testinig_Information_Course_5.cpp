@@ -618,6 +618,33 @@ void Sum_of_2_Arrays_to_a_Third_One(int array1[100], int array2[100], int array3
     }
 }
 
+//#Problem 31: Shuffle Ordered Array
+
+void SwapNumbers(int& number1, int& number2)
+{
+    int temp = number1;
+    number1 = number2;
+    number2 = temp;
+}
+
+void ArrayBeforeShuffle(int arr1[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        arr1[i] = i + 1;
+    }
+}
+
+void ArrayAfterShuffle(int arr1[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        short index1 = RandomNumber(0, length - 1);
+        short index2 = RandomNumber(0, length - 1);
+        SwapNumbers(arr1[index1], arr1[index2]);
+    }
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -826,7 +853,7 @@ int main()
     cout << "\n=======================================================\n";*/
 
     //this the call with problem 30: Sum_of_2_Arrays_to_A_ThirdOne
-    cout << "\n================== PROBLEM 30 =========================\n\n";
+    /*cout << "\n================== PROBLEM 30 =========================\n\n";
     short lengthArr1 = ReadLengthArrayOf100();
     int array1[100], array2[100], array3[100];
 
@@ -841,6 +868,19 @@ int main()
     Sum_of_2_Arrays_to_a_Third_One(array1, array2, array3, lengthArr1);
     cout << "\t-----------------\n\t   Array 3:\n\t-----------------\n";
     PrintArrayElements(array3, lengthArr1);
+    cout << "\n=======================================================\n";*/
+    
+    //this the call with problem 31: Shuffle Ordered Array
+    cout << "\n================== PROBLEM 31 =========================\n\n";
+    short lengthArr1 = ReadLengthArrayOf100();
+    int array1[100];
+
+    ArrayBeforeShuffle(array1, lengthArr1);
+    cout << "\t-----------------\n\t   Array Before Shuffle:\n\t-----------------\n";
+    PrintArrayElements(array1, lengthArr1);
+    ArrayAfterShuffle(array1, lengthArr1);
+        cout << "\t-----------------\n\t   Array After Shuffle:\n\t-----------------\n";
+    PrintArrayElements(array1, lengthArr1);
     cout << "\n=======================================================\n";
 
     return 0;
