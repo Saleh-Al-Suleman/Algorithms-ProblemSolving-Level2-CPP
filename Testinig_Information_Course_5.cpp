@@ -572,12 +572,18 @@ int MinValueInArray(int array[100], short length)
 //#Problem 26: Sum of Random Array
 int SumValuesInArray(int array[100], short length)
 {
-    int sum = array[0];
-    for (short i = 1; i < length; i++)
+    int sum = 0;
+    for (short i = 0; i < length; i++)
     {
         sum += array[i];
     }
     return sum;
+}
+
+//#Problem 27: Average of Random Array
+float AverageValuesInArray(int array[100], short length)
+{
+    return (float)SumValuesInArray(array, length) / length;
 }
 
 int main()
@@ -739,13 +745,23 @@ int main()
     cout << "\n=======================================================\n";*/
 
     //this the call with problem 26: Sum Random Array
-    cout << "\n================== PROBLEM 26 =========================\n\n";
+    /*cout << "\n================== PROBLEM 26 =========================\n\n";
     short length = ReadLengthArrayOf100();
     int array[100];
     FillArrayWithRandomNumbers(array, length);
     PrintArrayElements(array, length);
 
     cout << "Sum values is: " << SumValuesInArray(array, length);
+    cout << "\n=======================================================\n";*/
+    
+    //this the call with problem 27: Average Random Array
+    cout << "\n================== PROBLEM 27 =========================\n\n";
+    short length = ReadLengthArrayOf100();
+    int array[100];
+    FillArrayWithRandomNumbers(array, length);
+    PrintArrayElements(array, length);
+
+    cout << "Average values is: " << AverageValuesInArray(array, length);
     cout << "\n=======================================================\n";
 
     return 0;
