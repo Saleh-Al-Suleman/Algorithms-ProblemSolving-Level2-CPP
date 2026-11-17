@@ -97,3 +97,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #26:** Sum of Random Array - Calculates and returns the total sum of all elements within a randomly populated array using a single linear pass ($O(n)$ time complexity).
 
   <img width="749" height="229" alt="Solution_Problem#26" src="https://github.com/user-attachments/assets/9543fb6e-4fcb-45f9-a8d3-8a0630c78e94" />
+
+- **Problem #27:** Average of Random Array - Calculates and returns the exact floating-point average of array elements by reusing the `SumValuesInArray` function from Problem #26.
+
+  <img width="966" height="231" alt="Solution_Problem#27" src="https://github.com/user-attachments/assets/cf9a8108-cf0b-4bdd-9676-7a4a7c2d990c" />
