@@ -155,3 +155,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #40:** Copy Distinct Numbers to Array - Extracts unique elements from a source array containing duplicates into a new destination array by checking membership via `CheckNumberInArray` before appending with `AddOneElementToArray`.
 
   <img width="767" height="328" alt="Solution_Problem#40" src="https://github.com/user-attachments/assets/ed2164eb-2ed8-4e5f-ae4f-8dcc907b0750" />
+
+- **Problem #41:** Is Palindrome Array - Checks whether an integer array reads the same forward and backward by comparing symmetric elements with an early-exit optimization.
+
+  <img width="743" height="330" alt="Solution_Problem#41" src="https://github.com/user-attachments/assets/71f1acc6-a870-44f7-ae81-e74bb2583621" />
