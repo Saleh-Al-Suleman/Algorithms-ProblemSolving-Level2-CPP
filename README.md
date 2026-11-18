@@ -140,3 +140,6 @@ The goal of this repository is to practice core programming logic, optimize algo
 
   <img width="717" height="693" alt="Solution_Problem#36" src="https://github.com/user-attachments/assets/f2a75f10-eed0-4018-8a80-9fb83030141d" />
 
+- **Problem #37:** Copy Array Using AddArrayElement - Re-implements array copying by leveraging the modular `AddOneElementToArray` utility function from Problem #36 instead of direct index assignment.
+
+   <img width="727" height="347" alt="Solution_Problem#37" src="https://github.com/user-attachments/assets/f58a20f0-52c6-44bd-af30-660e80bcb65d" />
