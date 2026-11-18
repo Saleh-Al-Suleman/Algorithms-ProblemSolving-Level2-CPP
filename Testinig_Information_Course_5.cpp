@@ -880,6 +880,16 @@ int MyFloor(float number)
     }
 }
 
+//#Problem 49: MyCeil
+int MyCeil(float number)
+{
+    if (MyABS(GetFractionPart(number)) > 0 && number > 0)
+        return (int)number + 1;
+    else
+        return (int)number;
+}
+
+
 
 int main()
 {
@@ -1337,12 +1347,21 @@ int main()
     cout << "=============================================================\n";*/
     
     //this the call with problem 48: MyFloor
-    cout << "======================= [PROBLEM 48] =========================\n";
+    /*cout << "======================= [PROBLEM 48] =========================\n";
     float number2 = -10.2;
     cout << "This Function My Floor.\n";
     cout << "Value is {" << number2 << "}: " << MyFloor(number2) << "\n";
     number2 = 9.5;
     cout << "Value is {" << number2 << "}: " << MyFloor(number2) << "\n";
+    cout << "=============================================================\n";*/
+    
+    //this the call with problem 49: MyCeil
+    cout << "======================= [PROBLEM 49] =========================\n";
+    float number = 10.2;
+    cout << "This Function My Floor.\n";
+    cout << "Value is {" << number << "}: " << MyCeil(number) << "\n";
+    number = -10.7;
+    cout << "Value is {" << number << "}: " << MyCeil(number) << "\n";
     cout << "=============================================================\n";
 
 
