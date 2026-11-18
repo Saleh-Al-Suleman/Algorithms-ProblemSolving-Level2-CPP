@@ -866,6 +866,20 @@ int MyRound(float number)
     return part;
 }
 
+//#Problem 48: My Floor
+int MyFloor(float number)
+{
+    if (number >= 0)
+        return (int)number;
+    else
+    {
+        if (GetFractionPart(number) < 0)
+            return (int)number - 1;
+        else
+            return (int)number;
+    }
+}
+
 
 int main()
 {
@@ -1313,13 +1327,22 @@ int main()
     cout << "=============================================================\n";*/
     
     
-    //this the call with problem 47: My ABS
-    cout << "======================= [PROBLEM 47] =========================\n";
+    //this the call with problem 47: My Round
+    /*cout << "======================= [PROBLEM 47] =========================\n";
     float number2 = -10.5;
     cout << "This Function My Round.\n";
     cout << "Value is  {" << number2 << "}: " << MyRound(number2) << "\n";
     number2 = 9.5;
     cout << "Value is decimal {" << number2 << "}: " << MyRound(number2) << "\n";
+    cout << "=============================================================\n";*/
+    
+    //this the call with problem 48: MyFloor
+    cout << "======================= [PROBLEM 48] =========================\n";
+    float number2 = -10.2;
+    cout << "This Function My Floor.\n";
+    cout << "Value is {" << number2 << "}: " << MyFloor(number2) << "\n";
+    number2 = 9.5;
+    cout << "Value is {" << number2 << "}: " << MyFloor(number2) << "\n";
     cout << "=============================================================\n";
 
 
