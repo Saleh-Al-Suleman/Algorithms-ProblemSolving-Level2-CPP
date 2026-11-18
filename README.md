@@ -121,3 +121,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #32:** Copy Array in Reverse Order - Copies elements from a randomly populated source array into a destination array in reverse order using index arithmetic (`length - i - 1`) and `const`-protected array parameters.
 
   <img width="737" height="416" alt="Solution_Problem#32" src="https://github.com/user-attachments/assets/7524d076-846f-4c80-956c-961f63cde592" />
+
+- **Problem #33:** Fill Array With Keys - Populates a string array with randomly generated activation keys by reusing the `GenerateOneKey` utility and displays them with `const`-protected array printing.
+
+  <img width="730" height="359" alt="Solution_Problem#33" src="https://github.com/user-attachments/assets/57f3bb40-fa4d-4274-a953-06f6d39bf0d4" />
