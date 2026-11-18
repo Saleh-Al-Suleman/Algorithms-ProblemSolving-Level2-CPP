@@ -750,17 +750,13 @@ void CopyPrimeNumbers_to_NewArray(const int sourceArray[100], int arrPrime[100],
 //#Problem 40: Copy Distinct Numbers to Array
 void FillArray(int arr[100], short& arrLength)
 {
-    arrLength = 10;
+    arrLength = 6;
     arr[0] = 10;
-    arr[1] = 10;
-    arr[2] = 10;
-    arr[3] = 50;
-    arr[4] = 50;
-    arr[5] = 70;
-    arr[6] = 70;
-    arr[7] = 70;
-    arr[8] = 90;
-    arr[9] = 90;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 30;
+    arr[4] = 20;
+    arr[5] = 10;
 }
 
 void CopyDistinctNumbersToArray(const int arrSource[100], int arrDestination[100], const short sourceLength, short& destinationLength)
@@ -773,6 +769,16 @@ void CopyDistinctNumbersToArray(const int arrSource[100], int arrDestination[100
     }
 }
 
+//#Problem 41: Is Palindrome Array
+bool IsPalindromeArray(int arr1[100], short length)
+{
+    for (short i = 0; i < length / 2; i++)
+    {
+        if (arr1[i] != arr1[length - 1 - i])
+            return false;
+    }
+    return true;
+}
 
 int main()
 {
@@ -1133,7 +1139,7 @@ int main()
     
     
     //this the call with problem 40: Copy Distinct Numbers to Array
-    cout << "\n================== PROBLEM 40 =========================\n\n";
+    /*cout << "\n================== PROBLEM 40 =========================\n\n";
     short sourceLength = 0, destinationLength = 0;
     int arrSource[100], arrDestination[100];
     FillArray(arrSource, sourceLength);
@@ -1145,7 +1151,26 @@ int main()
     CopyDistinctNumbersToArray(arrSource, arrDestination, sourceLength, destinationLength);
     cout << "Array2 elements";
     PrintArrayElements(arrDestination, destinationLength);
-    cout << "Length array prime numbers is: " << destinationLength << ".\n";
+    cout << "Length array distinct  numbers is: " << destinationLength << ".\n";
+    cout << "=======================================================\n";*/
+    
+    //this the call with problem 41: Is Palindrome Array
+    cout << "\n================== PROBLEM 41 =========================\n\n";
+    int arrSorsec[100];short SorceLength = 0;
+
+    FillArray(arrSorsec, SorceLength);
+
+    cout << "Array 1 element: ";
+    PrintArrayElements(arrSorsec, SorceLength);
+
+    cout << "\n";
+    if (IsPalindromeArray(arrSorsec, SorceLength))
+    {
+        cout << "Yes, it is a Palindrome Array...\n";
+        PrintArrayElements(arrSorsec, SorceLength);
+    }
+    else
+        cout << "No, it is NOT a Palindrome Array..." << endl;
     cout << "=======================================================\n";
 
     return 0;
