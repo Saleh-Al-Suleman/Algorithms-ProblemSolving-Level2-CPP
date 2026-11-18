@@ -151,3 +151,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #39:** Copy Prime Numbers to a New Array - Re-implements prime number filtering by combining the `CheckPrime` utility with `AddOneElementToArray` and `const`-protected parameters to dynamically populate a destination array.
 
   <img width="723" height="349" alt="Solution_Problem#39" src="https://github.com/user-attachments/assets/e2903d66-3a08-496e-9511-4198bef95b78" />
+
+- **Problem #40:** Copy Distinct Numbers to Array - Extracts unique elements from a source array containing duplicates into a new destination array by checking membership via `CheckNumberInArray` before appending with `AddOneElementToArray`.
+
+  <img width="767" height="328" alt="Solution_Problem#40" src="https://github.com/user-attachments/assets/ed2164eb-2ed8-4e5f-ae4f-8dcc907b0750" />
