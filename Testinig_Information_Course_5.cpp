@@ -792,6 +792,18 @@ short CountOddNumbersInArray(const int SourceArray[100], const short length)
     return counter;
 }
 
+//#Problem 43: Count Even Numbers in Array
+short CountEvenNumbersInArray(const int SourceArray[100], const short length)
+{
+    short counter = 0;
+    for (short i = 0; i < length; i++)
+    {
+        if (SourceArray[i] % 2 == 0)
+            counter++;
+    }
+    return counter;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1186,13 +1198,23 @@ int main()
     cout << "=======================================================\n";*/
 
     //this the call with problem 42: Count Odd Numbers in Array
-    cout << "-------------------------- [PROBLEM 42} -----------------\n";
+    /*cout << "-------------------------- [PROBLEM 42} -----------------\n";
     short Array_length = ReadLengthArrayOf100();
     int arr[100];
     
     FillArrayWithRandomNumbers(arr, Array_length);
     PrintArrayElements(arr, Array_length);
     cout << "\nCount Number ODD in Array is: " << CountOddNumbersInArray(arr, Array_length) << ".\n";
+    cout << "---------------------------------------------------------\n";*/
+    
+    //this the call with problem 43: Count Even Numbers in Array
+    cout << "-------------------------- [PROBLEM 43] -----------------\n";
+    short Array_length = ReadLengthArrayOf100();
+    int arr[100];
+    
+    FillArrayWithRandomNumbers(arr, Array_length);
+    PrintArrayElements(arr, Array_length);
+    cout << "\nCount Number Even in Array is: " << CountEvenNumbersInArray(arr, Array_length) << ".\n";
     cout << "---------------------------------------------------------\n";
 
 
