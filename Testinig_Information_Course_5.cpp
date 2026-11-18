@@ -687,6 +687,36 @@ bool CheckNumber_in_Array(int arr1[100], short length, int number)
     return ReturnNumberIndexinArray(arr1, length, number) != -1;
 }
 
+//#Problem 36: Add Array Element Simi-Dynamic
+void AddOneElementToArray(int number, int arr1[100], short& length)
+{
+    length++;
+    arr1[length - 1] = number;
+}
+
+void AddArrayElementSimiDynamic(int arr1[100], short& length)
+{
+    short choice = 0;
+    do {
+        if (length >= 100)
+        {
+            cout << "\n\tOut Of Rnge elements in array....!\n";
+            break;
+        }
+        AddOneElementToArray(ReadPositiveNumber("\nPlease enter number: "), arr1, length);
+        
+        cout << "\nDo you want to add more numbers? [0]->No [1]->Yes\n";
+        choice = ReadDigit();
+        while ((choice != 0) && (choice != 1))
+        {
+            cout << "\n\tERROR....!\n";
+            cout << "\nDo you want to add more numbers? [0]->No [1]->Yes\n";
+            choice = ReadDigit();
+        }
+    } while (choice == 1);
+}
+
+
 
 int main()
 {
@@ -962,7 +992,7 @@ int main()
     cout << "=======================================================\n";*/
 
     //this the call with problem 35: Check Number in Array
-    cout << "\n================== PROBLEM 35 =========================\n\n";
+    /*cout << "\n================== PROBLEM 35 =========================\n\n";
     
     short length = ReadLengthArrayOf100();
     int arr1[100];
@@ -978,6 +1008,19 @@ int main()
     else
         cout << "the Number is not found ....!" << endl;
 
+    cout << "=======================================================\n";*/
+    
+    //this the call with problem 36: Add Array Element Simi-Dynamic
+    cout << "\n================== PROBLEM 36 =========================\n\n";
+    
+    short length = 0;
+    int arr1[100];
+    
+    AddArrayElementSimiDynamic(arr1, length);
+    
+    cout << "\nLength array is: " << length << ".\n";
+    PrintArrayElements(arr1, length);
+    
     cout << "=======================================================\n";
 
     return 0;
