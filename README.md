@@ -163,3 +163,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #42:** Count Odd Numbers in Array - Counts and returns the total number of odd integers within a randomly populated array using `const`-protected parameters and a single linear pass ($O(n)$).
 
   <img width="790" height="244" alt="Solution_Problem#42" src="https://github.com/user-attachments/assets/5e54c0fc-593a-45dd-b557-ce793fe2696d" />
+
+- **Problem #43:** Count Even Numbers in Array - Counts and returns the total number of even integers within an array using `const`-protected parameters and a linear pass ($O(n)$).
+
+  <img width="792" height="221" alt="Solution_Problem#43" src="https://github.com/user-attachments/assets/42207732-5901-4a84-8816-12eb34993440" />
