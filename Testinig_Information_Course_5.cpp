@@ -824,6 +824,18 @@ short CountPositiveNumbersInArray(const int arr1[100], const short length)
     return counter;
 }
 
+//#Problem 45: Count Negative Numbers In Array
+short CountNegativeNumbersInArray(const int arr1[100], const short length)
+{
+    short counter = 0;
+    for (short i = 0; i < length; i++)
+    {
+        if (arr1[i] < 0)
+            counter++;
+    }
+    return counter;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1238,13 +1250,23 @@ int main()
     cout << "---------------------------------------------------------\n";*/
     
     //this the call with problem 44: Count Positive Numbers in Array
-    cout << "-------------------------- [PROBLEM 44] -----------------\n";
+    /*cout << "-------------------------- [PROBLEM 44] -----------------\n";
     short Array_length = ReadLengthArrayOf100();
     int arr[100];
     
     FillArrayPositiveAndNegativeRandomNumbers(arr, Array_length);
     PrintArrayElements(arr, Array_length);
     cout << "\nCount Positive numbers in Array is: " << CountPositiveNumbersInArray(arr, Array_length) << ".\n";
+    cout << "---------------------------------------------------------\n";*/
+    
+    //this the call with problem 45: Count Negative Numbers In Array
+    cout << "-------------------------- [PROBLEM 45] -----------------\n";
+    short Array_length = ReadLengthArrayOf100();
+    int arr[100];
+    
+    FillArrayPositiveAndNegativeRandomNumbers(arr, Array_length);
+    PrintArrayElements(arr, Array_length);
+    cout << "\nCount Positive numbers in Array is: " << CountNegativeNumbersInArray(arr, Array_length) << ".\n";
     cout << "---------------------------------------------------------\n";
 
 
