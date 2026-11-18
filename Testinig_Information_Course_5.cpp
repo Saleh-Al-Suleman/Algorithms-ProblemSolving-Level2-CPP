@@ -653,7 +653,22 @@ void CopyArrayInReverseOrder(const int arr1[100], int arr2[100], short length)
     }
 }
 
+//#Problem 33: Fill Array With Keys
+void FillArrayWithKeys(string arr1[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        arr1[i] = GenerateOneKey();
+    }
+}
 
+void PrintStrArrayKeys(const string array[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        cout << "Key [" << i + 1 << "]: " << array[i] << "\n";
+    }
+}
 
 int main()
 {
@@ -894,7 +909,7 @@ int main()
     cout << "\n=======================================================\n";*/
 
     //this the call with problem 32: Copy Array In Reverse Order
-    cout << "\n================== PROBLEM 32 =========================\n\n";
+    /*cout << "\n================== PROBLEM 32 =========================\n\n";
     int arr1[100], arr2[100];
     short length = ReadLengthArrayOf100();
     FillArrayWithRandomNumbers(arr1, length);
@@ -907,6 +922,15 @@ int main()
     cout << "Values in Array2:\n";
     PrintArrayElements(arr2, length);
 
+    cout << "=======================================================\n";*/
+
+    //this the call with problem 33: FillArrayWithKeys
+    cout << "\n================== PROBLEM 32 =========================\n\n";
+    short length = ReadLengthArrayOf100();
+    string arr1[100];
+    FillArrayWithKeys(arr1, length);
+    cout << "Elements:\n";
+    PrintStrArrayKeys(arr1, length);
     cout << "=======================================================\n";
 
     return 0;
