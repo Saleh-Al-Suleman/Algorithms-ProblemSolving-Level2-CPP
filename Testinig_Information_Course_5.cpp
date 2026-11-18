@@ -671,7 +671,7 @@ void PrintStrArrayKeys(const string array[100], short length)
 }
 
 //#Problem 34: ReturnNumberIndexinArray
-short ReturnNumberIndexinArray(int arr[100], short length, int elementInArray)
+short ReturnNumberIndexinArray(const int arr[100], short length, int elementInArray)
 {
     for (short i = 0; i < length; i++)
     {
@@ -682,7 +682,7 @@ short ReturnNumberIndexinArray(int arr[100], short length, int elementInArray)
 }
 
 //#Problem 35: Check Number in Array
-bool CheckNumber_in_Array(int arr1[100], short length, int number)
+bool CheckNumber_in_Array(const int arr1[100], short length, int number)
 {
     return ReturnNumberIndexinArray(arr1, length, number) != -1;
 }
@@ -737,7 +737,7 @@ void CopyOddNumbers_to_NewArray(int sourceArray[100], int arrOdds[100], short le
 }
 
 //#Problem 39: Copy Prime Numbers to a New Array
-void CopyPrimeNumbers_to_NewArray(const int sourceArray[100], int arrPrime[100], const int length, short& arrPrimelength)
+void CopyPrimeNumbers_to_NewArray(const int sourceArray[100], int arrPrime[100], const short length, short& arrPrimelength)
 {
     arrPrimelength = 0;
     for (short i = 0; i < length; i++)
@@ -746,6 +746,33 @@ void CopyPrimeNumbers_to_NewArray(const int sourceArray[100], int arrPrime[100],
             AddOneElementToArray(sourceArray[i], arrPrime, arrPrimelength);
     }
 }
+
+//#Problem 40: Copy Distinct Numbers to Array
+void FillArray(int arr[100], short& arrLength)
+{
+    arrLength = 10;
+    arr[0] = 10;
+    arr[1] = 10;
+    arr[2] = 10;
+    arr[3] = 50;
+    arr[4] = 50;
+    arr[5] = 70;
+    arr[6] = 70;
+    arr[7] = 70;
+    arr[8] = 90;
+    arr[9] = 90;
+}
+
+void CopyDistinctNumbersToArray(const int arrSource[100], int arrDestination[100], const short sourceLength, short& destinationLength)
+{
+    destinationLength = 0;
+    for (short i = 0; i < sourceLength; i++)
+    {
+        if (!(CheckNumber_in_Array(arrDestination, destinationLength, arrSource[i])))
+            AddOneElementToArray(arrSource[i], arrDestination, destinationLength);
+    }
+}
+
 
 int main()
 {
@@ -1087,7 +1114,7 @@ int main()
     cout << "=======================================================\n";*/
     
     //this the call with problem 39: Copy Prime Numbers to a New Array
-    cout << "\n================== PROBLEM 38 =========================\n\n";
+    /*cout << "\n================== PROBLEM 39 =========================\n\n";
 
     short length = ReadLengthArrayOf100();
     short ArrOddLength = 0;
@@ -1102,6 +1129,23 @@ int main()
     cout << "Array2 elements";
     PrintArrayElements(arr2, ArrOddLength);
     cout << "Length array prime numbers is: " << ArrOddLength << ".\n";
+    cout << "=======================================================\n";*/
+    
+    
+    //this the call with problem 40: Copy Distinct Numbers to Array
+    cout << "\n================== PROBLEM 40 =========================\n\n";
+    short sourceLength = 0, destinationLength = 0;
+    int arrSource[100], arrDestination[100];
+    FillArray(arrSource, sourceLength);
+
+
+    cout << "\nArray1 elements";
+    PrintArrayElements(arrSource, sourceLength);
+
+    CopyDistinctNumbersToArray(arrSource, arrDestination, sourceLength, destinationLength);
+    cout << "Array2 elements";
+    PrintArrayElements(arrDestination, destinationLength);
+    cout << "Length array prime numbers is: " << destinationLength << ".\n";
     cout << "=======================================================\n";
 
     return 0;
