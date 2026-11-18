@@ -619,7 +619,6 @@ void Sum_of_2_Arrays_to_a_Third_One(int array1[100], int array2[100], int array3
 }
 
 //#Problem 31: Shuffle Ordered Array
-
 void SwapNumbers(int& number1, int& number2)
 {
     int temp = number1;
@@ -644,6 +643,17 @@ void ArrayAfterShuffle(int arr1[100], short length)
         SwapNumbers(arr1[index1], arr1[index2]);
     }
 }
+
+//#Problem 32: Copy Array In Reverse Order
+void CopyArrayInReverseOrder(const int arr1[100], int arr2[100], short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        arr2[i] = arr1[length - i - 1];
+    }
+}
+
+
 
 int main()
 {
@@ -871,7 +881,7 @@ int main()
     cout << "\n=======================================================\n";*/
     
     //this the call with problem 31: Shuffle Ordered Array
-    cout << "\n================== PROBLEM 31 =========================\n\n";
+    /*cout << "\n================== PROBLEM 31 =========================\n\n";
     short lengthArr1 = ReadLengthArrayOf100();
     int array1[100];
 
@@ -881,7 +891,23 @@ int main()
     ArrayAfterShuffle(array1, lengthArr1);
         cout << "\t-----------------\n\t   Array After Shuffle:\n\t-----------------\n";
     PrintArrayElements(array1, lengthArr1);
-    cout << "\n=======================================================\n";
+    cout << "\n=======================================================\n";*/
+
+    //this the call with problem 32: Copy Array In Reverse Order
+    cout << "\n================== PROBLEM 32 =========================\n\n";
+    int arr1[100], arr2[100];
+    short length = ReadLengthArrayOf100();
+    FillArrayWithRandomNumbers(arr1, length);
+    
+    cout << "\nValues in Array1:\n";
+    PrintArrayElements(arr1, length);
+    
+    cout << "---------------------\n";
+    CopyArrayInReverseOrder(arr1, arr2, length);
+    cout << "Values in Array2:\n";
+    PrintArrayElements(arr2, length);
+
+    cout << "=======================================================\n";
 
     return 0;
 }
