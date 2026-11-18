@@ -175,3 +175,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #45:** Count Negative Numbers in Array - Counts and returns the total number of strictly negative integers (`< 0`) within an array using `const`-protected parameters and a single linear pass ($O(n)$).
 
   <img width="889" height="260" alt="Solution_Problem#45" src="https://github.com/user-attachments/assets/e896a416-4958-4694-90c0-0f44692a3c26" />
+
+- **Problem #46:** MyABS - Implements overloaded custom absolute value functions (`int` and `float`) from scratch using concise ternary operators (`? :`) and validates both positive and negative test cases.
+
+  <img width="811" height="230" alt="Solution_Problem#46" src="https://github.com/user-attachments/assets/5127d4a0-33c1-479f-8f31-2a2ee0712f30" />
