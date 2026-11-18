@@ -836,6 +836,17 @@ short CountNegativeNumbersInArray(const int arr1[100], const short length)
     return counter;
 }
 
+//#Problem 46: MyABS
+int MyABS(int number)
+{
+    return (number < 0) ? number * -1 : number;
+}
+
+float MyABS(float number)
+{
+    return (number < 0) ? number * -1 : number;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1260,14 +1271,26 @@ int main()
     cout << "---------------------------------------------------------\n";*/
     
     //this the call with problem 45: Count Negative Numbers In Array
-    cout << "-------------------------- [PROBLEM 45] -----------------\n";
+    /*cout << "-------------------------- [PROBLEM 45] -----------------\n";
     short Array_length = ReadLengthArrayOf100();
     int arr[100];
     
     FillArrayPositiveAndNegativeRandomNumbers(arr, Array_length);
     PrintArrayElements(arr, Array_length);
     cout << "\nCount Positive numbers in Array is: " << CountNegativeNumbersInArray(arr, Array_length) << ".\n";
-    cout << "---------------------------------------------------------\n";
+    cout << "---------------------------------------------------------\n";*/
+    
+    //this the call with problem 46: My ABS
+    cout << "======================= [PROBLEM 46] =========================\n";
+    int number1 = -2;
+    float number2 = -10.5;
+    cout << "This Function My ABS.\n";
+    cout << "Value is integer {" << number1 << "}: " << MyABS(number1) << "\n";
+    cout << "Value is decimal {" << number2 << "}: " << MyABS(number2) << "\n";
+    number1 = 3; number2 = 9.5;
+    cout << "Value is integer {" << number1 << "}: " << MyABS(number1) << "\n";
+    cout << "Value is decimal {" << number2 << "}: " << MyABS(number2) << "\n";
+    cout << "=============================================================\n";
 
 
     return 0;
