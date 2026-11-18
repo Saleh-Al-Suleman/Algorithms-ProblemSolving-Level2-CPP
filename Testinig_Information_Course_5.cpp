@@ -804,6 +804,26 @@ short CountEvenNumbersInArray(const int SourceArray[100], const short length)
     return counter;
 }
 
+//#Problem 44: Count Positive Numbers in Array
+void FillArrayPositiveAndNegativeRandomNumbers(int arr1[100], const short length)
+{
+    for (short i = 0; i < length; i++)
+    {
+        arr1[i] = RandomNumber(-100, 100);
+    }
+}
+
+short CountPositiveNumbersInArray(const int arr1[100], const short length)
+{
+    short counter = 0;
+    for (short i = 0; i < length; i++)
+    {
+        if (arr1[i] > 0)
+            counter++;
+    }
+    return counter;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1208,13 +1228,23 @@ int main()
     cout << "---------------------------------------------------------\n";*/
     
     //this the call with problem 43: Count Even Numbers in Array
-    cout << "-------------------------- [PROBLEM 43] -----------------\n";
+    /*cout << "-------------------------- [PROBLEM 43] -----------------\n";
     short Array_length = ReadLengthArrayOf100();
     int arr[100];
     
     FillArrayWithRandomNumbers(arr, Array_length);
     PrintArrayElements(arr, Array_length);
     cout << "\nCount Number Even in Array is: " << CountEvenNumbersInArray(arr, Array_length) << ".\n";
+    cout << "---------------------------------------------------------\n";*/
+    
+    //this the call with problem 44: Count Positive Numbers in Array
+    cout << "-------------------------- [PROBLEM 44] -----------------\n";
+    short Array_length = ReadLengthArrayOf100();
+    int arr[100];
+    
+    FillArrayPositiveAndNegativeRandomNumbers(arr, Array_length);
+    PrintArrayElements(arr, Array_length);
+    cout << "\nCount Positive numbers in Array is: " << CountPositiveNumbersInArray(arr, Array_length) << ".\n";
     cout << "---------------------------------------------------------\n";
 
 
