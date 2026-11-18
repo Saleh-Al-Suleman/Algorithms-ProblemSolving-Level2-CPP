@@ -780,6 +780,18 @@ bool IsPalindromeArray(int arr1[100], short length)
     return true;
 }
 
+//#Problem 42: Count Odd Numbers in Array
+short CountOddNumbersInArray(const int SourceArray[100], const short length)
+{
+    short counter = 0;
+    for (short i = 0; i < length; i++)
+    {
+        if (SourceArray[i] % 2 != 0)
+            counter++;
+    }
+    return counter;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1155,7 +1167,7 @@ int main()
     cout << "=======================================================\n";*/
     
     //this the call with problem 41: Is Palindrome Array
-    cout << "\n================== PROBLEM 41 =========================\n\n";
+    /*cout << "\n================== PROBLEM 41 =========================\n\n";
     int arrSorsec[100];short SorceLength = 0;
 
     FillArray(arrSorsec, SorceLength);
@@ -1171,7 +1183,18 @@ int main()
     }
     else
         cout << "No, it is NOT a Palindrome Array..." << endl;
-    cout << "=======================================================\n";
+    cout << "=======================================================\n";*/
+
+    //this the call with problem 42: Count Odd Numbers in Array
+    cout << "-------------------------- [PROBLEM 42} -----------------\n";
+    short Array_length = ReadLengthArrayOf100();
+    int arr[100];
+    
+    FillArrayWithRandomNumbers(arr, Array_length);
+    PrintArrayElements(arr, Array_length);
+    cout << "\nCount Number ODD in Array is: " << CountOddNumbersInArray(arr, Array_length) << ".\n";
+    cout << "---------------------------------------------------------\n";
+
 
     return 0;
 }
