@@ -129,3 +129,10 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #34:** Return Number Index in Array - Implements a linear search function ($O(n)$) that returns the zero-based index of a target element or `-1` if not found.
 
   <img width="747" height="267" alt="Solution_Problem#34" src="https://github.com/user-attachments/assets/51912d71-268a-4f19-ba54-73a946260159" />
+
+- **Problem #35:** Check Number in Array - Returns a boolean indicating whether a target number exists in an array by reusing the `ReturnNumberIndexinArray` linear search function from Problem #34.
+
+  <img width="735" height="268" alt="Solution_Problem#35_1" src="https://github.com/user-attachments/assets/78ac7b40-15dd-4bc9-9a3a-ab2a0c481d13" />
+
+  <img width="739" height="261" alt="Solution_Problem#35_2" src="https://github.com/user-attachments/assets/6d99b00c-7e91-48fb-8c52-ba4bedd80d4c" />
+
