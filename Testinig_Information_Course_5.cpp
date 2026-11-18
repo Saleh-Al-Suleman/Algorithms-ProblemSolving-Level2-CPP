@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cmath>
 
 using namespace std;
 
@@ -889,6 +890,14 @@ int MyCeil(float number)
         return (int)number;
 }
 
+//#Problem 50: MySqrt
+float MySqrt(float number)
+{
+    if (number < 0)
+        return -1;
+    else
+        return pow(number, 0.5f);
+}
 
 
 int main()
@@ -1356,12 +1365,21 @@ int main()
     cout << "=============================================================\n";*/
     
     //this the call with problem 49: MyCeil
-    cout << "======================= [PROBLEM 49] =========================\n";
+    /*cout << "======================= [PROBLEM 49] =========================\n";
     float number = 10.2;
-    cout << "This Function My Floor.\n";
+    cout << "This Function My Ceil.\n";
     cout << "Value is {" << number << "}: " << MyCeil(number) << "\n";
     number = -10.7;
     cout << "Value is {" << number << "}: " << MyCeil(number) << "\n";
+    cout << "=============================================================\n";*/
+    
+    //this the call with problem 50: MySqrt
+    cout << "======================= [PROBLEM 50] =========================\n";
+    float number = 48;
+    cout << "This Function My Sqrt.\n";
+    cout << "Value is {" << number << "}: " << MySqrt(number) << "\n";
+    number = 36;
+    cout << "Value is {" << number << "}: " << MySqrt(number) << "\n";
     cout << "=============================================================\n";
 
 
