@@ -147,3 +147,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #38:** Copy Odd Numbers to a New Array - Filters odd integers from a randomly populated source array into a new destination array using the `AddOneElementToArray` utility and tracks the new array length via pass-by-reference.
 
   <img width="738" height="351" alt="Solution_Problem#38" src="https://github.com/user-attachments/assets/6bf6207d-0133-4d43-87af-3feb384bd233" />
+
+- **Problem #39:** Copy Prime Numbers to a New Array - Re-implements prime number filtering by combining the `CheckPrime` utility with `AddOneElementToArray` and `const`-protected parameters to dynamically populate a destination array.
+
+  <img width="723" height="349" alt="Solution_Problem#39" src="https://github.com/user-attachments/assets/e2903d66-3a08-496e-9511-4198bef95b78" />
