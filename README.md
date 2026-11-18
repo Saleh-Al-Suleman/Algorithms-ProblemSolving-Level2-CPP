@@ -143,3 +143,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #37:** Copy Array Using AddArrayElement - Re-implements array copying by leveraging the modular `AddOneElementToArray` utility function from Problem #36 instead of direct index assignment.
 
    <img width="727" height="347" alt="Solution_Problem#37" src="https://github.com/user-attachments/assets/f58a20f0-52c6-44bd-af30-660e80bcb65d" />
+
+- **Problem #38:** Copy Odd Numbers to a New Array - Filters odd integers from a randomly populated source array into a new destination array using the `AddOneElementToArray` utility and tracks the new array length via pass-by-reference.
+
+  <img width="738" height="351" alt="Solution_Problem#38" src="https://github.com/user-attachments/assets/6bf6207d-0133-4d43-87af-3feb384bd233" />
