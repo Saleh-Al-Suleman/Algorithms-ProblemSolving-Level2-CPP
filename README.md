@@ -187,3 +187,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #48:** MyFloor - Implements a custom floor function from scratch that rounds numbers down toward negative infinity while accurately handling negative whole numbers and zero.
 
   <img width="841" height="173" alt="Solution_Problem#48" src="https://github.com/user-attachments/assets/a311bb96-8002-4d12-a78f-df03965a2211" />
+
+- **Problem #49:** MyCeil - Implements a custom ceiling function from scratch that rounds floating-point numbers up toward positive infinity by reusing `MyABS` and `GetFractionPart`.
+
+  <img width="817" height="151" alt="Solution_Problem#49" src="https://github.com/user-attachments/assets/4856447c-e077-49ab-868b-f951fe62a6f2" />
