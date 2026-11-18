@@ -847,6 +847,26 @@ float MyABS(float number)
     return (number < 0) ? number * -1 : number;
 }
 
+//#Problem 47: MyRound
+float GetFractionPart(float number)
+{
+    return number - (int)number;
+}
+int MyRound(float number)
+{
+    int part = (int)number;
+    float FractionPart = MyABS(GetFractionPart(number));
+    if (FractionPart >= 0.5)
+    {
+        if (number > 0)
+            ++part;
+        else
+            --part;
+    }
+    return part;
+}
+
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1281,7 +1301,7 @@ int main()
     cout << "---------------------------------------------------------\n";*/
     
     //this the call with problem 46: My ABS
-    cout << "======================= [PROBLEM 46] =========================\n";
+    /*cout << "======================= [PROBLEM 46] =========================\n";
     int number1 = -2;
     float number2 = -10.5;
     cout << "This Function My ABS.\n";
@@ -1290,6 +1310,16 @@ int main()
     number1 = 3; number2 = 9.5;
     cout << "Value is integer {" << number1 << "}: " << MyABS(number1) << "\n";
     cout << "Value is decimal {" << number2 << "}: " << MyABS(number2) << "\n";
+    cout << "=============================================================\n";*/
+    
+    
+    //this the call with problem 47: My ABS
+    cout << "======================= [PROBLEM 47] =========================\n";
+    float number2 = -10.5;
+    cout << "This Function My Round.\n";
+    cout << "Value is  {" << number2 << "}: " << MyRound(number2) << "\n";
+    number2 = 9.5;
+    cout << "Value is decimal {" << number2 << "}: " << MyRound(number2) << "\n";
     cout << "=============================================================\n";
 
 
