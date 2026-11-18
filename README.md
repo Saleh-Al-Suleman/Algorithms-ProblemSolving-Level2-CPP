@@ -159,3 +159,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #41:** Is Palindrome Array - Checks whether an integer array reads the same forward and backward by comparing symmetric elements with an early-exit optimization.
 
   <img width="743" height="330" alt="Solution_Problem#41" src="https://github.com/user-attachments/assets/71f1acc6-a870-44f7-ae81-e74bb2583621" />
+
+- **Problem #42:** Count Odd Numbers in Array - Counts and returns the total number of odd integers within a randomly populated array using `const`-protected parameters and a single linear pass ($O(n)$).
+
+  <img width="790" height="244" alt="Solution_Problem#42" src="https://github.com/user-attachments/assets/5e54c0fc-593a-45dd-b557-ce793fe2696d" />
