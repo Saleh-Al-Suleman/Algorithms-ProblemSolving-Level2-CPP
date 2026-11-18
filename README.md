@@ -113,3 +113,11 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #30:** Sum of 2 Arrays to a Third One - Calculates the element-wise sum of two randomly populated arrays and stores the results in a third destination array using a single linear pass ($O(n)$).
 
   <img width="742" height="669" alt="Solution_Problem#30" src="https://github.com/user-attachments/assets/e574d610-68c5-45a1-a79c-673f5a5b962d" />
+
+- **Problem #31:** Shuffle Ordered Array - Populates an array with ordered integers from 1 to N and randomly shuffles its elements in-place using a pass-by-reference `SwapNumbers` utility function.
+
+  <img width="731" height="487" alt="Solution_Problem#31" src="https://github.com/user-attachments/assets/4244b407-2a6e-4d1f-b552-3c0a58b7c9fa" />
+
+- **Problem #32:** Copy Array in Reverse Order - Copies elements from a randomly populated source array into a destination array in reverse order using index arithmetic (`length - i - 1`) and `const`-protected array parameters.
+
+  <img width="737" height="416" alt="Solution_Problem#32" src="https://github.com/user-attachments/assets/7524d076-846f-4c80-956c-961f63cde592" />
