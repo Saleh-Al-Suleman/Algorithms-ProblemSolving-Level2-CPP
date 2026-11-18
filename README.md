@@ -125,3 +125,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #33:** Fill Array With Keys - Populates a string array with randomly generated activation keys by reusing the `GenerateOneKey` utility and displays them with `const`-protected array printing.
 
   <img width="730" height="359" alt="Solution_Problem#33" src="https://github.com/user-attachments/assets/57f3bb40-fa4d-4274-a953-06f6d39bf0d4" />
+
+- **Problem #34:** Return Number Index in Array - Implements a linear search function ($O(n)$) that returns the zero-based index of a target element or `-1` if not found.
+
+  <img width="747" height="267" alt="Solution_Problem#34" src="https://github.com/user-attachments/assets/51912d71-268a-4f19-ba54-73a946260159" />
