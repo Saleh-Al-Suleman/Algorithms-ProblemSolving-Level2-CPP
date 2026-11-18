@@ -681,6 +681,13 @@ short ReturnNumberIndexinArray(int arr[100], short length, int elementInArray)
     return -1;
 }
 
+//#Problem 35: Check Number in Array
+bool CheckNumber_in_Array(int arr1[100], short length, int number)
+{
+    return ReturnNumberIndexinArray(arr1, length, number) != -1;
+}
+
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -945,13 +952,32 @@ int main()
     cout << "=======================================================\n";*/
     
     //this the call with problem 34: Return Number Index in Array
-    cout << "\n================== PROBLEM 34 =========================\n\n";
+    /*cout << "\n================== PROBLEM 34 =========================\n\n";
     short length = ReadLengthArrayOf100();
     int arr1[100];
     FillArrayWithRandomNumbers(arr1, length);
     PrintArrayElements(arr1, length);
     int elementInArray = ReadPositiveNumber("Please enter the number you wanto to know the index: ");
     cout << "The index is: "<<ReturnNumberIndexinArray(arr1, length, elementInArray)<<" in array.\n";
+    cout << "=======================================================\n";*/
+
+    //this the call with problem 35: Check Number in Array
+    cout << "\n================== PROBLEM 35 =========================\n\n";
+    
+    short length = ReadLengthArrayOf100();
+    int arr1[100];
+    
+    FillArrayWithRandomNumbers(arr1, length);
+    
+    PrintArrayElements(arr1, length);
+    
+    int elementInArray = ReadPositiveNumber("Please enter the number you want to know if exist: ");
+    
+    if (CheckNumber_in_Array(arr1, length, elementInArray))
+        cout << "yes, the number is found " << endl;
+    else
+        cout << "the Number is not found ....!" << endl;
+
     cout << "=======================================================\n";
 
     return 0;
