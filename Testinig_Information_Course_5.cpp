@@ -670,6 +670,17 @@ void PrintStrArrayKeys(const string array[100], short length)
     }
 }
 
+//#Problem 34: ReturnNumberIndexinArray
+short ReturnNumberIndexinArray(int arr[100], short length, int elementInArray)
+{
+    for (short i = 0; i < length; i++)
+    {
+        if (arr[i] == elementInArray)
+            return i;
+    }
+    return -1;
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -925,12 +936,22 @@ int main()
     cout << "=======================================================\n";*/
 
     //this the call with problem 33: FillArrayWithKeys
-    cout << "\n================== PROBLEM 32 =========================\n\n";
+    /*cout << "\n================== PROBLEM 33 =========================\n\n";
     short length = ReadLengthArrayOf100();
     string arr1[100];
     FillArrayWithKeys(arr1, length);
     cout << "Elements:\n";
     PrintStrArrayKeys(arr1, length);
+    cout << "=======================================================\n";*/
+    
+    //this the call with problem 34: Return Number Index in Array
+    cout << "\n================== PROBLEM 34 =========================\n\n";
+    short length = ReadLengthArrayOf100();
+    int arr1[100];
+    FillArrayWithRandomNumbers(arr1, length);
+    PrintArrayElements(arr1, length);
+    int elementInArray = ReadPositiveNumber("Please enter the number you wanto to know the index: ");
+    cout << "The index is: "<<ReturnNumberIndexinArray(arr1, length, elementInArray)<<" in array.\n";
     cout << "=======================================================\n";
 
     return 0;
