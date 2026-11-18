@@ -183,3 +183,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #47:** MyRound - Implements a custom rounding function from scratch that handles both positive and negative floating-point numbers by reusing `MyABS` and a helper `GetFractionPart` function.
 
   <img width="819" height="178" alt="Solution_Problem#47" src="https://github.com/user-attachments/assets/2ae3a764-44d7-418d-a6e2-8ff571d5fe27" />
+
+- **Problem #48:** MyFloor - Implements a custom floor function from scratch that rounds numbers down toward negative infinity while accurately handling negative whole numbers and zero.
+
+  <img width="841" height="173" alt="Solution_Problem#48" src="https://github.com/user-attachments/assets/a311bb96-8002-4d12-a78f-df03965a2211" />
