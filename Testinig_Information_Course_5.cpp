@@ -716,6 +716,14 @@ void AddArrayElementSimiDynamic(int arr1[100], short& length)
     } while (choice == 1);
 }
 
+//#problem 37: Resolve Problem (28) Copy Array Using AddArrayElement
+void CopyArrayUsingAddArrayElement(int sourceArr1[100], int arr2[100], short length)
+{
+    for (short i = 0; i < length;)
+    {
+        AddOneElementToArray(sourceArr1[i], arr2, i);
+    }
+}
 
 
 int main()
@@ -1011,7 +1019,7 @@ int main()
     cout << "=======================================================\n";*/
     
     //this the call with problem 36: Add Array Element Simi-Dynamic
-    cout << "\n================== PROBLEM 36 =========================\n\n";
+    /*cout << "\n================== PROBLEM 36 =========================\n\n";
     
     short length = 0;
     int arr1[100];
@@ -1021,7 +1029,27 @@ int main()
     cout << "\nLength array is: " << length << ".\n";
     PrintArrayElements(arr1, length);
     
+    cout << "=======================================================\n";*/
+
+    //this the call with problem 37: Resolve Problem (28) Copy Array Using AddArrayElement
+
+    cout << "\n================== PROBLEM 37 =========================\n\n";
+
+    short length = ReadLengthArrayOf100();
+    int arr1[100], arr2[100];
+
+    FillArrayWithRandomNumbers(arr1,length);
+
+    cout << "\nArray1 elements";
+    PrintArrayElements(arr1, length);
+
+    CopyArrayUsingAddArrayElement(arr1, arr2, length);
+    cout << "Array2 elements";
+    PrintArrayElements(arr2, length);
+    cout << "Length array is: " << length << ".\n";
     cout << "=======================================================\n";
+
+
 
     return 0;
 }
