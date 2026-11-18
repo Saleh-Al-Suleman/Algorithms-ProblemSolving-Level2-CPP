@@ -191,3 +191,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #49:** MyCeil - Implements a custom ceiling function from scratch that rounds floating-point numbers up toward positive infinity by reusing `MyABS` and `GetFractionPart`.
 
   <img width="817" height="151" alt="Solution_Problem#49" src="https://github.com/user-attachments/assets/4856447c-e077-49ab-868b-f951fe62a6f2" />
+
+- **Problem #50:** MySqrt - Implements a custom square root function from scratch using the fractional exponent rule (`pow(number, 0.5)`) with input validation for negative values.
+
+  <img width="817" height="180" alt="Solution_Problem#50" src="https://github.com/user-attachments/assets/6f0c064c-02c9-4f13-b6ad-bf91e0cb6d8c" />
