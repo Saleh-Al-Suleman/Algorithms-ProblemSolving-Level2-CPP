@@ -736,6 +736,17 @@ void CopyOddNumbers_to_NewArray(int sourceArray[100], int arrOdds[100], short le
     }
 }
 
+//#Problem 39: Copy Prime Numbers to a New Array
+void CopyPrimeNumbers_to_NewArray(const int sourceArray[100], int arrPrime[100], const int length, short& arrPrimelength)
+{
+    arrPrimelength = 0;
+    for (short i = 0; i < length; i++)
+    {
+        if (CheckPrime(sourceArray[i]) == enPrimeNotPrime::Prime)
+            AddOneElementToArray(sourceArray[i], arrPrime, arrPrimelength);
+    }
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
@@ -1058,7 +1069,7 @@ int main()
     cout << "=======================================================\n";*/
 
     //this the call with problem 38: Copy Odd Numbers to a New Array
-    cout << "\n================== PROBLEM 38 =========================\n\n";
+    /*cout << "\n================== PROBLEM 38 =========================\n\n";
 
     short length = ReadLengthArrayOf100();
     short ArrOddLength = 0;
@@ -1073,6 +1084,24 @@ int main()
     cout << "Array2 elements";
     PrintArrayElements(arr2, ArrOddLength);
     cout << "Length array odd numbers is: " << ArrOddLength << ".\n";
+    cout << "=======================================================\n";*/
+    
+    //this the call with problem 39: Copy Prime Numbers to a New Array
+    cout << "\n================== PROBLEM 38 =========================\n\n";
+
+    short length = ReadLengthArrayOf100();
+    short ArrOddLength = 0;
+    int arr1[100], arr2[100];
+
+    FillArrayWithRandomNumbers(arr1, length);
+
+    cout << "\nArray1 elements";
+    PrintArrayElements(arr1, length);
+
+    CopyPrimeNumbers_to_NewArray(arr1, arr2, length, ArrOddLength);
+    cout << "Array2 elements";
+    PrintArrayElements(arr2, ArrOddLength);
+    cout << "Length array prime numbers is: " << ArrOddLength << ".\n";
     cout << "=======================================================\n";
 
     return 0;
