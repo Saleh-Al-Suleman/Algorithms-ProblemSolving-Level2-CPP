@@ -179,3 +179,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 - **Problem #46:** MyABS - Implements overloaded custom absolute value functions (`int` and `float`) from scratch using concise ternary operators (`? :`) and validates both positive and negative test cases.
 
   <img width="811" height="230" alt="Solution_Problem#46" src="https://github.com/user-attachments/assets/5127d4a0-33c1-479f-8f31-2a2ee0712f30" />
+
+- **Problem #47:** MyRound - Implements a custom rounding function from scratch that handles both positive and negative floating-point numbers by reusing `MyABS` and a helper `GetFractionPart` function.
+
+  <img width="819" height="178" alt="Solution_Problem#47" src="https://github.com/user-attachments/assets/2ae3a764-44d7-418d-a6e2-8ff571d5fe27" />
