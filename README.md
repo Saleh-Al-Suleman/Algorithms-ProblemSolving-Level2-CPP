@@ -136,3 +136,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 
   <img width="739" height="261" alt="Solution_Problem#35_2" src="https://github.com/user-attachments/assets/6d99b00c-7e91-48fb-8c52-ba4bedd80d4c" />
 
+- **Problem #36:** Add Array Element Semi-Dynamic - Allows users to dynamically append numbers to an array without pre-specifying its size, using a modular `AddOneElementToArray` helper function and pass-by-reference length tracking.
+
+  <img width="717" height="693" alt="Solution_Problem#36" src="https://github.com/user-attachments/assets/f2a75f10-eed0-4018-8a80-9fb83030141d" />
+
