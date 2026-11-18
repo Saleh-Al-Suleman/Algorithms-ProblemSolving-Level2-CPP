@@ -725,6 +725,16 @@ void CopyArrayUsingAddArrayElement(int sourceArr1[100], int arr2[100], short len
     }
 }
 
+//#Problem 38: Copy Odd Numbers to a New Array
+void CopyOddNumbers_to_NewArray(int sourceArray[100], int arrOdds[100], short length,short& oddArrlength)
+{
+    oddArrlength = 0;
+    for (short i = 0; i < length; i++)
+    {
+        if (sourceArray[i] % 2 != 0)
+            AddOneElementToArray(sourceArray[i], arrOdds, oddArrlength);
+    }
+}
 
 int main()
 {
@@ -852,7 +862,6 @@ int main()
     cout << "\n========================================================\n";*/
 
     //this the call with problem 23: Fill Array With Random Numbers From 1 To 100
-
     /*cout << "\n================== PROBLEM 23 =========================\n\n";
     int array[100];
 
@@ -1032,8 +1041,7 @@ int main()
     cout << "=======================================================\n";*/
 
     //this the call with problem 37: Resolve Problem (28) Copy Array Using AddArrayElement
-
-    cout << "\n================== PROBLEM 37 =========================\n\n";
+    /*cout << "\n================== PROBLEM 37 =========================\n\n";
 
     short length = ReadLengthArrayOf100();
     int arr1[100], arr2[100];
@@ -1047,9 +1055,25 @@ int main()
     cout << "Array2 elements";
     PrintArrayElements(arr2, length);
     cout << "Length array is: " << length << ".\n";
+    cout << "=======================================================\n";*/
+
+    //this the call with problem 38: Copy Odd Numbers to a New Array
+    cout << "\n================== PROBLEM 38 =========================\n\n";
+
+    short length = ReadLengthArrayOf100();
+    short ArrOddLength = 0;
+    int arr1[100], arr2[100];
+
+    FillArrayWithRandomNumbers(arr1,length);
+
+    cout << "\nArray1 elements";
+    PrintArrayElements(arr1, length);
+
+    CopyOddNumbers_to_NewArray(arr1, arr2, length, ArrOddLength);
+    cout << "Array2 elements";
+    PrintArrayElements(arr2, ArrOddLength);
+    cout << "Length array odd numbers is: " << ArrOddLength << ".\n";
     cout << "=======================================================\n";
-
-
 
     return 0;
 }
