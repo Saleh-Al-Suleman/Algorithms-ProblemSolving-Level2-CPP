@@ -3,6 +3,27 @@ This repository contains my solutions and implementations for the **Algorithms &
 ## 🎯 Purpose
 The goal of this repository is to practice core programming logic, optimize algorithms, and track my continuous progress problem by problem.
 
+## 📂 Repository Structure & Projects
+
+| Folder | Description | Status |
+| :--- | :--- | :---: |
+| 📁 **[01-50-Problems](./01-50-Problems)** | Complete solutions for all 50 algorithm and problem-solving challenges in C++. | ✅ Completed |
+| 🎮 **[02-GameStonePaperScissor](./02-GameStonePaperScissor)** | Console-based Stone-Paper-Scissor game against the computer with round tracking and winner logic. | 🚧 In Progress |
+| 🧮 **[03-MathGame](./03-MathGame)** | Interactive Math Quiz game featuring customizable difficulty levels and operation types. | ⏳ Upcoming |
+
+---
+
+## 🏆 Final Course Projects
+
+### 1. Stone-Paper-Scissor Game (`02-GameStonePaperScissor`)
+* **Folder:** [View Project Code](./02-GameStonePaperScissor)
+* **Key Concepts:** Enums, Structs, Random Number Generation, Modular Functions, and Console Color Formatting.
+
+### 2. Math Quiz Game (`03-MathGame`)
+* **Folder:** [View Project Code](./03-MathGame)
+* **Key Concepts:** Difficulty Levels (`Easy`, `Med`, `Hard`, `Mix`), Arithmetic Operations (`+`, `-`, `*`, `/`, `Mix`), and Score Evaluation.
+
+
 ## 🚀 Solved Problems
 - **Problem #1:** Multiplication Table (1 to 10) formatted using logical loops and conditional statements (`if-else`).
   <img width="1097" height="406" alt="Screenshot (1002)" src="https://github.com/user-attachments/assets/bbf0bcd3-47bd-4fbe-b6a0-94ebda673a80" />
