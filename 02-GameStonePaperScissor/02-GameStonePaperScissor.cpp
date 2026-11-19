@@ -80,6 +80,37 @@ enOption GetComputerChoice()
     return (enOption)RandomNumber(1, 3);
 }
 
+// ==========================================
+// Task 3: Core Game Rules & Winner Logic
+// ==========================================
+
+enWinner WhoWonTheRound(stRoundInfo RoundInfo)
+{
+    if (RoundInfo.OptionPlayer == RoundInfo.OptionBot)
+        return enWinner::Draw;
+    switch (RoundInfo.OptionPlayer)
+    {
+    case enOption::Paper:
+        return (RoundInfo.OptionBot == enOption::Stone) ? enWinner::Player : enWinner::Bot;
+    case enOption::Stone:
+        return (RoundInfo.OptionBot == enOption::Scissor) ? enWinner::Player : enWinner::Bot;
+    case enOption::Scissor:
+        return (RoundInfo.OptionBot == enOption::Paper) ? enWinner::Player : enWinner::Bot;
+    
+    default: return enWinner::Draw;
+    }
+}
+
+enWinner WhoWonTheGame(short PlayerWinTimes, short BotWinTimes)
+{
+    if (PlayerWinTimes > BotWinTimes)
+        return enWinner::Player;
+    else if (BotWinTimes > PlayerWinTimes)
+        return enWinner::Bot;
+    else
+        return enWinner::Draw;
+}
+
 int main()
 {
     
