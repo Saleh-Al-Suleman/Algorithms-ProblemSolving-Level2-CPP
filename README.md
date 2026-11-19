@@ -9,7 +9,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 | :--- | :--- | :---: |
 | 📁 **[01-50-Problems](./01-50-Problems)** | Complete solutions for all 50 algorithm and problem-solving challenges in C++. | ✅ Completed |
 | 🎮 **[02-GameStonePaperScissor](./02-GameStonePaperScissor)** | Console-based Stone-Paper-Scissor game against the computer with round tracking and winner logic. | ✅ Completed |
-| 🧮 **[03-MathGame](./03-MathGame)** | Interactive Math Quiz game featuring customizable difficulty levels and operation types. | 🚧 In Progress |
+| 🧮 **[03-MathGame](./03-MathGame)** | Interactive Math Quiz game featuring customizable difficulty levels and operation types. | ✅ Completed |
 
 ---
 
@@ -33,8 +33,21 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 ### 2. Math Quiz Game (`03-MathGame`)
 * **Folder:** [View Project Code](./03-MathGame)
-* **Key Concepts:** Difficulty Levels (`Easy`, `Med`, `Hard`, `Mix`), Arithmetic Operations (`+`, `-`, `*`, `/`, `Mix`), and Score Evaluation.
+* **Description:** An interactive arithmetic quiz engine supporting 1 to 10 customizable questions, four difficulty levels (`Easy`, `Med`, `Hard`, `Mix`), and five operation modes (`+`, `-`, `*`, `/`, `Mix`). Provides instant color-coded answer validation, automatic grading (`PASS` / `FAIL`), and structured summary reports.
+* **Key Concepts:** Enums, Nested Structs, Pass-by-Reference Optimization, Dynamic Question Generation, `iomanip` ASCII Tables, and Input Validation.
+* **Output Screenshots:**
 
+    <img width="650" alt="Firstly" src="https://github.com/user-attachments/assets/65296d67-9b34-4d48-a033-0ae8be9dfac5" />
+
+    <img width="650" alt="errorStatus" src="https://github.com/user-attachments/assets/478e7896-ca9d-4073-a9c9-7fc43c54dc6e" />
+
+    <img width="650" alt="FirstRound" src="https://github.com/user-attachments/assets/7fe9d058-5537-431d-8e5f-75c85dd56ded" />
+
+    <img width="650" alt="secoundRound" src="https://github.com/user-attachments/assets/6a4c441a-415d-40e3-a8e4-1cd90cbe0999" />
+
+    <img width="650" alt="Third" src="https://github.com/user-attachments/assets/7026c82e-1d73-41d0-ae44-ece2f2ce72d2" />
+
+    <img width="650" alt="lastRound" src="https://github.com/user-attachments/assets/d8a54c71-bf09-46ca-8c76-1472345bbcb5" />
 
 ## 🚀 Solved Problems
 - **Problem #1:** Multiplication Table (1 to 10) formatted using logical loops and conditional statements (`if-else`).
