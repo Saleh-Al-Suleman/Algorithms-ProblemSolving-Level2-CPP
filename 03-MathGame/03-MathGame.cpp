@@ -234,6 +234,56 @@ void CorrectTheQuestionAnswer(stQuizz& Quizz, short QuestionNumber)
 	SetScreenColor(Quizz.QuestionList[QuestionNumber].AnswerResult);
 }
 
+// ==========================================
+// Task 5: Round & Final Quiz Results Display
+// ==========================================
+
+void ShowWelcomeScreen()
+{
+	cout << "\n" << setw(16) << "" << "+========================================================+\n";
+	cout << setw(16) << "" << "|             WELCOME TO THE MATH QUIZ GAME              |\n";
+	cout << setw(16) << "" << "+========================================================+\n";
+	cout << setw(16) << "" << "|  Test your arithmetic skills across custom challenges: |\n";
+	cout << setw(16) << "" << "|   * Difficulty Levels : Easy, Med, Hard, or Mix        |\n";
+	cout << setw(16) << "" << "|   * Operations        : Add, Sub, Mul, Div, or Mix     |\n";
+	cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+	cout << setw(16) << "" << "|  Score >= 50% to PASS. Good luck!                      |\n";
+	cout << setw(16) << "" << "+========================================================+\n\n";
+}
+void PrintTheQuestion(stQuizz& Quizz, short QuestionNumber)
+{
+	cout << "\n" << setw(16) << "" << "+------------------ [ Question " << left << setw(2) << (QuestionNumber + 1)
+		<< " / " << left << setw(2) << Quizz.numberOfQuestions << " ] -----------------+\n";
+	cout << setw(16) << "" << "|  " << left << setw(54) << Quizz.QuestionList[QuestionNumber].number1 << "|\n";
+	cout << setw(16) << "" << "|  " << left << setw(54) << (to_string(Quizz.QuestionList[QuestionNumber].number2) + "  " + GetOpTypeSymbol(Quizz.QuestionList[QuestionNumber].OperationType)) << "|\n";
+	cout << setw(16) << "" << "|  " << left << setw(54) << "---------------" << "|\n";
+	cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+	cout << setw(16) << "" << "Your Answer: ";
+}
+
+string GetFinalResultsText(bool Pass)
+{
+	return Pass ? "PASS :-)" : "FAIL :-(";
+}
+
+void PrintQuizzResults(stQuizz Quizz)
+{
+	cout << "\n" << setw(16) << "" << "+========================================================+\n";
+	cout << setw(16) << "" << "|            FINAL RESULT: " << left << setw(30) << GetFinalResultsText(Quizz.isPass) << "|\n";
+	cout << setw(16) << "" << "+==================================+=====================+\n";
+	
+	cout << setw(16) << "" << "| " << left << setw(33) << "Metric" << "| " << left << setw(20) << "Value" << "|\n";
+	
+	cout << setw(16) << "" << "+----------------------------------+---------------------+\n";
+	cout << setw(16) << "" << "| " << left << setw(33) << "Number of Questions" << "| " << left << setw(20) << Quizz.numberOfQuestions << "|\n";
+	cout << setw(16) << "" << "| " << left << setw(33) << "Questions Level" << "| " << left << setw(20) << GetQuestionLevelText(Quizz.QuestionLevel) << "|\n";
+	cout << setw(16) << "" << "| " << left << setw(33) << "Operation Type" << "| " << left << setw(20) << GetOpTypeSymbol(Quizz.opType) << "|\n";
+	cout << setw(16) << "" << "| " << left << setw(33) << "Right Answers" << "| " << left << setw(20) << Quizz.numberOfRightAnswers << "|\n";
+	cout << setw(16) << "" << "| " << left << setw(33) << "Wrong Answers" << "| " << left << setw(20) << Quizz.numberOFWrongAnswers << "|\n";
+	cout << setw(16) << "" << "+----------------------------------+---------------------+\n\n";
+
+	SetScreenColor(Quizz.isPass);
+}
 
 int main()
 {
