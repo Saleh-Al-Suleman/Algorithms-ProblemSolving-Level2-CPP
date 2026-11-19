@@ -34,7 +34,7 @@ struct stRoundInfo
     string NameWinner;
 };
 
-struct stGameResult
+struct stGameResults
 {
     int GameRounds;
     int PlayerWinTimes;
@@ -144,6 +144,54 @@ void SetWinnerScreenColor(enWinner Winner)
         system("color 6F");
         break;
     }
+}
+
+// ==========================================
+// Task 5: Round & Final Game Results Display
+// ==========================================
+void PrintRoundResults(stRoundInfo RoundInfo)
+{
+    cout << "\n" << setw(16) << "" << "+------------------ [ Round " << left << setw(2) << RoundInfo.RoundNumber << " ] ------------------+\n";
+    cout << setw(16) << "" << "| " << left << setw(22) << "Player Choice"
+        << ": " << left << setw(26) << ChoiceName(RoundInfo.OptionPlayer) << "|\n";
+    cout << setw(16) << "" << "| " << left << setw(22) << "Bot Choice"
+        << ": " << left << setw(26) << ChoiceName(RoundInfo.OptionBot) << "|\n";
+    cout << setw(16) << "" << "| " << left << setw(22) << "Round Winner"
+        << ": " << left << setw(26) << RoundInfo.NameWinner << "|\n";
+    cout << setw(16) << "" << "+----------------------------------------------------+\n\n";
+
+    SetWinnerScreenColor(RoundInfo.Winner);
+}
+
+void ShowGameOverScreen()
+{
+    cout << "\n" << setw(16) << "" << "+========================================================+\n";
+    cout << setw(16) << "" << "|                  +++ G a m e  O v e r +++              |\n";
+    cout << setw(16) << "" << "+========================================================+\n\n";
+}
+
+void ShowFinalGameResults(stGameResults GameResults)
+{
+    cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+    cout << setw(16) << "" << "|                    [ GAME SUMMARY ]                    |\n";
+    cout << setw(16) << "" << "+----------------------------------+---------------------+\n";
+    cout << setw(16) << "" << "| " << left << setw(33) << "Metric"
+        << "| " << left << setw(20) << "Value" << "|\n";
+    cout << setw(16) << "" << "+----------------------------------+---------------------+\n";
+    cout << setw(16) << "" << "| " << left << setw(33) << "Total Game Rounds"
+        << "| " << left << setw(20) << GameResults.GameRounds << "|\n";
+    cout << setw(16) << "" << "| " << left << setw(33) << "Player Win Times"
+        << "| " << left << setw(20) << GameResults.PlayerWinTimes << "|\n";
+    cout << setw(16) << "" << "| " << left << setw(33) << "Bot Win Times"
+        << "| " << left << setw(20) << GameResults.BotWinTimes << "|\n";
+    cout << setw(16) << "" << "| " << left << setw(33) << "Draw Times"
+        << "| " << left << setw(20) << GameResults.DrawTimes << "|\n";
+    cout << setw(16) << "" << "+----------------------------------+---------------------+\n";
+    cout << setw(16) << "" << "| " << left << setw(33) << "FINAL WINNER"
+        << "| " << left << setw(20) << GameResults.WinnerName << "|\n";
+    cout << setw(16) << "" << "+----------------------------------+---------------------+\n\n";
+
+    SetWinnerScreenColor(GameResults.GameWinner);
 }
 
 int main()
