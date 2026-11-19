@@ -285,9 +285,64 @@ void PrintQuizzResults(stQuizz Quizz)
 	SetScreenColor(Quizz.isPass);
 }
 
+// ==========================================
+// Task 6: Main Quiz Engine & Loop Control
+// ==========================================
+
+void AskAndCorrectQuestionListAnswers(stQuizz& Quizz)
+{
+	for (short QuestionNumber = 0; QuestionNumber < Quizz.numberOfQuestions; QuestionNumber++)
+	{
+		PrintTheQuestion(Quizz, QuestionNumber);
+		Quizz.QuestionList[QuestionNumber].PlayerAnswer = ReadQuestionAnswer();
+		CorrectTheQuestionAnswer(Quizz, QuestionNumber);
+	}
+
+	Quizz.isPass = (Quizz.numberOfRightAnswers >= Quizz.numberOFWrongAnswers);
+}
+
+void PlayMathGame()
+{
+	stQuizz Quizz;
+
+	Quizz.numberOfQuestions = ReadHowManyQuestions();
+	Quizz.QuestionLevel = ReadQuestionsLevel();
+	Quizz.opType = ReadOpType();
+
+	GenerateQuizzQuestions(Quizz);
+	AskAndCorrectQuestionListAnswers(Quizz);
+	PrintQuizzResults(Quizz);
+}
+
+void ResetScreen()
+{
+	system("cls");
+	system("color 0F");
+}
+
+void StartGame()
+{
+	char PlayAgain = 'Y';
+
+	do
+	{
+		ResetScreen();
+		ShowWelcomeScreen();
+		PlayMathGame();
+
+		cout << setw(16) << "" << "Do you want to play again? [Y/N]: ";
+		cin >> PlayAgain;
+
+	} while (PlayAgain == 'Y' || PlayAgain == 'y');
+}
+
 int main()
 {
+	srand((unsigned)time(NULL));
+	StartGame();
 
+	system("pause>0");
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
