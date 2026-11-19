@@ -8,7 +8,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 | Folder | Description | Status |
 | :--- | :--- | :---: |
 | 📁 **[01-50-Problems](./01-50-Problems)** | Complete solutions for all 50 algorithm and problem-solving challenges in C++. | ✅ Completed |
-| 🎮 **[02-GameStonePaperScissor](./02-GameStonePaperScissor)** | Console-based Stone-Paper-Scissor game against the computer with round tracking and winner logic. | 🚧 In Progress |
+| 🎮 **[02-GameStonePaperScissor](./02-GameStonePaperScissor)** | Console-based Stone-Paper-Scissor game against the computer with round tracking and winner logic. | ✅ Completed |
 | 🧮 **[03-MathGame](./03-MathGame)** | Interactive Math Quiz game featuring customizable difficulty levels and operation types. | ⏳ Upcoming |
 
 ---
@@ -17,7 +17,14 @@ The goal of this repository is to practice core programming logic, optimize algo
 
 ### 1. Stone-Paper-Scissor Game (`02-GameStonePaperScissor`)
 * **Folder:** [View Project Code](./02-GameStonePaperScissor)
-* **Key Concepts:** Enums, Structs, Random Number Generation, Modular Functions, and Console Color Formatting.
+* **Description:** An interactive console game where the player competes against the computer across 1 to 10 customizable rounds. Features dynamic screen color feedback, formatted ASCII summary tables using `iomanip`, input validation, and replay functionality.
+* **Key Concepts:** Enums, Structs, Random Number Generation, Modular Bottom-Up Design, `iomanip` Table Formatting, and Console Color Control.
+* **Output Screenshots:**
+  <img width="650" alt="FirstlyStart" src="https://github.com/user-attachments/assets/01dd396c-68b4-480c-9b8a-864c78d63d44" />
+  <img width="650" alt="SomeErrorStatus" src="https://github.com/user-attachments/assets/b2027474-4c21-4aa7-abe7-fcea366ffcfc" />
+  <img width="650" alt="statusOneDraw" src="https://github.com/user-attachments/assets/582aa564-c378-4768-9449-13fe9a0ff567" />
+  <img width="650" alt="PlayerWinner" src="https://github.com/user-attachments/assets/99267d24-5637-4eb5-8a82-6542d91969ac" />
+  <img width="650" alt="BotWinner" src="https://github.com/user-attachments/assets/26b4bfb0-533c-4da6-a8d7-1f1f1b6ebe7c" />
 
 ### 2. Math Quiz Game (`03-MathGame`)
 * **Folder:** [View Project Code](./03-MathGame)
