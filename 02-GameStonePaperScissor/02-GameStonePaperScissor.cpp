@@ -2,10 +2,52 @@
 //
 
 #include <iostream>
+#include <cstdlib>
+#include <iomanip>
+#include <string>
+#include <ctime>
+
+using namespace std;
+
+// ==========================================
+// Task 1: Game Enums & Data Structures
+// ==========================================
+
+enum enOption {
+    Stone = 1,
+    Paper = 2,
+    Scissor = 3
+};
+
+enum enWinner {
+    Player = 1,
+    Bot = 2,
+    Draw = 3
+};
+
+struct stRoundInfo
+{
+    int RoundNumber;
+    enOption OptionPlayer;
+    enOption OptionBot;
+    enWinner Winner;
+    string NameWinner;
+};
+
+struct stGameResult
+{
+    int GameRounds;
+    int PlayerWinTimes;
+    int BotWinTimes;
+    int DrawTimes;
+
+    enWinner GameWinner;
+    string WinnerName;
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
