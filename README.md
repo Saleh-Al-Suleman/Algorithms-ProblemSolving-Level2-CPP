@@ -9,7 +9,7 @@ The goal of this repository is to practice core programming logic, optimize algo
 | :--- | :--- | :---: |
 | 📁 **[01-50-Problems](./01-50-Problems)** | Complete solutions for all 50 algorithm and problem-solving challenges in C++. | ✅ Completed |
 | 🎮 **[02-GameStonePaperScissor](./02-GameStonePaperScissor)** | Console-based Stone-Paper-Scissor game against the computer with round tracking and winner logic. | ✅ Completed |
-| 🧮 **[03-MathGame](./03-MathGame)** | Interactive Math Quiz game featuring customizable difficulty levels and operation types. | ⏳ Upcoming |
+| 🧮 **[03-MathGame](./03-MathGame)** | Interactive Math Quiz game featuring customizable difficulty levels and operation types. | 🚧 In Progress |
 
 ---
 
