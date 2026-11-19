@@ -2,6 +2,51 @@
 //
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+#include <string>
+
+// ==========================================
+// Task 1: Game Enums & Data Structures
+// ==========================================
+
+enum enQuestionsLevel {
+	EasyLevel = 1,
+	MedLevel = 2,
+	HardLevel = 3,
+	Mix = 4
+};
+
+enum enOperationType {
+	Add = 1,
+	Sub = 2,
+	Mult = 3,
+	Div = 4,
+	MixOp = 5
+};
+
+struct stQuestion {
+	int number1;
+	int number2;
+	int CorrectAnswer;
+	int PlayerAnswer;
+	bool AnswerResult;
+	enOperationType OperationType;
+	enQuestionsLevel QuestionLevel;
+};
+
+struct stQuizz {
+	stQuestion QuestionList[100];
+
+	int numberOfQuestions = 0;
+	int numberOfRightAnswers = 0;
+	int numberOFWrongAnswers = 0;
+	enQuestionsLevel QuestionLevel;
+	enOperationType opType;
+
+	bool isPass = false;
+};
 
 int main()
 {
