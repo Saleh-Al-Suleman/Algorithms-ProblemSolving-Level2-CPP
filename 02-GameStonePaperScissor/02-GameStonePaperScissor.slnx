@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="02-GameStonePaperScissor.vcxproj" />
+  <Project Path="02-GameStonePaperScissor.vcxproj" Id="625c8540-7c34-4d63-b782-2fcd93d61543" />
 </Solution>

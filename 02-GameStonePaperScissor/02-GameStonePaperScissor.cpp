@@ -36,10 +36,10 @@ struct stRoundInfo
 
 struct stGameResults
 {
-    int GameRounds;
-    int PlayerWinTimes;
-    int BotWinTimes;
-    int DrawTimes;
+    short GameRounds;
+    short PlayerWinTimes;
+    short BotWinTimes;
+    short DrawTimes;
 
     enWinner GameWinner;
     string WinnerName;
@@ -172,7 +172,7 @@ void ShowGameOverScreen()
 
 void ShowFinalGameResults(stGameResults GameResults)
 {
-    cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+    cout << setw(16) << "\n" << " +--------------------------------------------------------+\n";
     cout << setw(16) << "" << "|                    [ GAME SUMMARY ]                    |\n";
     cout << setw(16) << "" << "+----------------------------------+---------------------+\n";
     cout << setw(16) << "" << "| " << left << setw(33) << "Metric"
@@ -194,9 +194,98 @@ void ShowFinalGameResults(stGameResults GameResults)
     SetWinnerScreenColor(GameResults.GameWinner);
 }
 
+// ==========================================
+// Task 6: Main Game Engine & Loop Control
+// ==========================================
+stGameResults FillGameResults(int GameRounds, short PlayerWinTimes, short BotWinTimes, short DrawTimes)
+{
+    stGameResults GameResults;
+
+    GameResults.GameRounds = GameRounds;
+    GameResults.PlayerWinTimes = PlayerWinTimes;
+    GameResults.BotWinTimes = BotWinTimes;
+    GameResults.DrawTimes = DrawTimes;
+    GameResults.GameWinner = WhoWonTheGame(PlayerWinTimes, BotWinTimes);
+    GameResults.WinnerName = WinnerName(GameResults.GameWinner);
+
+    return GameResults;
+}
+
+stGameResults PlayGame(short HowManyRounds)
+{
+    stRoundInfo RoundInfo;
+    short PlayerWinTimes = 0, BotWinTimes = 0, DrawTimes = 0;
+
+    for (short GameRound = 1; GameRound <= HowManyRounds; GameRound++)
+    {
+        cout << "\nRound [" << GameRound << "] begins:\n";
+        RoundInfo.RoundNumber = GameRound;
+        RoundInfo.OptionPlayer = ReadPlayerChoice();
+        RoundInfo.OptionBot = GetComputerChoice();
+        RoundInfo.Winner = WhoWonTheRound(RoundInfo);
+        RoundInfo.NameWinner = WinnerName(RoundInfo.Winner);
+
+        if (RoundInfo.Winner == enWinner::Player)
+            PlayerWinTimes++;
+        else if (RoundInfo.Winner == enWinner::Bot)
+            BotWinTimes++;
+        else
+            DrawTimes++;
+
+        PrintRoundResults(RoundInfo);
+    }
+
+    return FillGameResults(HowManyRounds, PlayerWinTimes, BotWinTimes, DrawTimes);
+}
+
+void ResetScreen()
+{
+    system("cls");
+    system("color 0F");
+}
+
+void ShowWelcomeScreen()
+{
+    cout << "\n" << setw(16) << "" << "+========================================================+\n";
+    cout << setw(16) << "" << "|           WELCOME TO STONE - PAPER - SCISSOR           |\n";
+    cout << setw(16) << "" << "+========================================================+\n";
+    cout << setw(16) << "" << "|  Rules:                                                |\n";
+    cout << setw(16) << "" << "|   * Stone   crushes  Scissor                           |\n";
+    cout << setw(16) << "" << "|   * Scissor cuts     Paper                             |\n";
+    cout << setw(16) << "" << "|   * Paper   covers   Stone                             |\n";
+    cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+    cout << setw(16) << "" << "|  Select rounds (1 - 10) and challenge the Bot!         |\n";
+    cout << setw(16) << "" << "+========================================================+\n\n";
+}
+
+
+void StartGame()
+{
+    char PlayAgain = 'Y';
+
+    do
+    {
+        ResetScreen();
+        ShowWelcomeScreen();
+        stGameResults GameResults = PlayGame(ReadHowManyRounds());
+        ShowGameOverScreen();
+
+        cout << "Press any key to continue...";
+        system("pause>0");
+        ShowFinalGameResults(GameResults);
+
+        cout << setw(16) << "" << "Do you want to play again? [Y/N]: ";
+        cin >> PlayAgain;
+
+    } while (PlayAgain == 'Y' || PlayAgain == 'y');
+}
+
 int main()
 {
-    
+    srand((unsigned)time(NULL));
+    StartGame();
+    system("pause>0");
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
