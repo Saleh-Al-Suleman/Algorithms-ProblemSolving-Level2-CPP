@@ -45,6 +45,41 @@ struct stGameResult
     string WinnerName;
 };
 
+// ==========================================
+// Task 2: Input Validation & Random Choice Functions
+// ==========================================
+int RandomNumber(int From, int To)
+{
+    return (int) rand() % (To - From + 1) + From;
+}
+
+int ReadHowManyRounds()
+{
+    int NumberOfRounds = 0;
+    do
+    {
+        cout << "Please enter how many number of rounds (from 1 to 10): ";
+        cin >> NumberOfRounds;
+    } while (NumberOfRounds < 1 || NumberOfRounds>10);
+    return NumberOfRounds;
+}
+
+enOption ReadPlayerChoice()
+{
+    short Choice = 0;
+    do
+    {
+        cout << "Please enter the choice [1]->Stone [2]->Paper [3]-> Scissor\nEnter here: ";
+        cin >> Choice;
+    } while (Choice < 1 || Choice>3);
+    return (enOption)Choice;
+}
+
+enOption GetComputerChoice()
+{
+    return (enOption)RandomNumber(1, 3);
+}
+
 int main()
 {
     
