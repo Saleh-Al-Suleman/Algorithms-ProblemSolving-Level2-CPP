@@ -7,6 +7,8 @@
 #include <iomanip>
 #include <string>
 
+using namespace std;
+
 // ==========================================
 // Task 1: Game Enums & Data Structures
 // ==========================================
@@ -47,6 +49,75 @@ struct stQuizz {
 
 	bool isPass = false;
 };
+
+// ==========================================
+// Task 2: Input Validation & Random Choice Functions
+// ==========================================
+
+int RandomNumber(int From, int To)
+{
+	return (int)rand() % (To - From + 1) + From;
+}
+
+short ReadHowManyQuestions()
+{
+	int NumberOfQuestions = 0;
+	do
+	{
+		cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "| " << left << setw(55) << "Please enter how many questions you want [1 to 10]" << "|\n";
+		cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "Enter here [1 -> 10]: ";
+		cin >> NumberOfQuestions;
+
+	} while (NumberOfQuestions < 1 || NumberOfQuestions > 10);
+
+	return NumberOfQuestions;
+}
+
+enQuestionsLevel ReadQuestionsLevel()
+{
+	short QuestionLevel = 0;
+	do
+	{
+		cout << "\n" << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "| " << left << setw(55) << "Select Questions Difficulty Level:" << "|\n";
+		cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "| " << left << setw(55) << "[1] Easy    [2] Med    [3] Hard    [4] Mix" << "|\n";
+		cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "Enter Level [1 -> 4]: ";
+		cin >> QuestionLevel;
+
+	} while (QuestionLevel < 1 || QuestionLevel > 4);
+
+	return (enQuestionsLevel)QuestionLevel;
+}
+
+enOperationType ReadOpType()
+{
+	short OpType = 0;
+	do
+	{
+		cout << "\n" << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "| " << left << setw(55) << "Select Arithmetic Operation Type:" << "|\n";
+		cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "| " << left << setw(55) << "[1] Add (+)   [2] Sub (-)   [3] Mul (*)   [4] Div (/)" << "|\n";
+		cout << setw(16) << "" << "| " << left << setw(55) << "[5] Mix Operations" << "|\n";
+		cout << setw(16) << "" << "+--------------------------------------------------------+\n";
+		cout << setw(16) << "" << "Enter Operation [1 -> 5]: ";
+		cin >> OpType;
+
+	} while (OpType < 1 || OpType > 5);
+
+	return (enOperationType)OpType;
+}
+
+int ReadQuestionAnswer()
+{
+	int Answer = 0;
+	cin >> Answer;
+	return Answer;
+}
 
 int main()
 {
