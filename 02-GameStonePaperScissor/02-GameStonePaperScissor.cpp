@@ -111,6 +111,41 @@ enWinner WhoWonTheGame(short PlayerWinTimes, short BotWinTimes)
         return enWinner::Draw;
 }
 
+// ==========================================
+// Task 4: Text Formatting & Screen Color Helpers
+// ==========================================
+string ChoiceName(enOption Option)
+{
+    string NamesOption[3] = { "Stone","Paper","Scissor" };
+    return NamesOption[Option - 1];
+}
+
+string WinnerName(enWinner Winner)
+{
+    string NameWinner[3] = { "Player","Bot","Draw" };
+    return NameWinner[Winner - 1];
+}
+
+void SetWinnerScreenColor(enWinner Winner)
+{
+    switch (Winner)
+    {
+    case enWinner::Player:
+        system("color 2F");
+        break;
+    case enWinner::Bot:
+        system("color 4F");
+        cout << "\a";
+        break;
+    case enWinner::Draw:
+        system("color 6F");
+        break;
+    default:
+        system("color 6F");
+        break;
+    }
+}
+
 int main()
 {
     
