@@ -119,6 +119,77 @@ int ReadQuestionAnswer()
 	return Answer;
 }
 
+// ==========================================
+// Task 3: Question Generation & Calculator Logic
+// ==========================================
+int SimpleCalculator(int Number1, int Number2, enOperationType Optype)
+{
+	switch (Optype)
+	{
+	case enOperationType::Add:
+		return Number1 + Number2;
+	case enOperationType::Sub:
+		return Number1 - Number2;
+	case enOperationType::Mult:
+		return Number1 * Number2;
+	case enOperationType::Div:
+		return (Number2 != 0) ? (Number1 / Number2) : 0;
+	default:
+		return Number1 + Number2;
+	}
+}
+
+enOperationType GetRandomOperationType()
+{
+	return (enOperationType)RandomNumber(1, 4);
+}
+
+stQuestion GenerateQuestion(enQuestionsLevel QuestionLevel, enOperationType OpType)
+{
+	stQuestion Question;
+
+	if (QuestionLevel == enQuestionsLevel::Mix)
+	{
+		QuestionLevel = (enQuestionsLevel)RandomNumber(1, 3);
+	}
+
+	if (OpType == enOperationType::MixOp)
+	{
+		OpType = GetRandomOperationType();
+	}
+
+	Question.OperationType = OpType;
+	Question.QuestionLevel = QuestionLevel;
+
+	switch (QuestionLevel)
+	{
+	case enQuestionsLevel::EasyLevel:
+		Question.number1 = RandomNumber(1, 10);
+		Question.number2 = RandomNumber(1, 10);
+		break;
+
+	case enQuestionsLevel::MedLevel:
+		Question.number1 = RandomNumber(10, 50);
+		Question.number2 = RandomNumber(10, 50);
+		break;
+
+	case enQuestionsLevel::HardLevel:
+		Question.number1 = RandomNumber(50, 100);
+		Question.number2 = RandomNumber(50, 100);
+		break;
+	}
+	Question.CorrectAnswer = SimpleCalculator(Question.number1, Question.number2, Question.OperationType);
+	return Question;
+}
+
+void GenerateQuizzQuestions(stQuizz& Quizz)
+{
+	for (short Question = 0; Question < Quizz.numberOfQuestions; Question++)
+	{
+		Quizz.QuestionList[Question] = GenerateQuestion(Quizz.QuestionLevel, Quizz.opType);
+	}
+}
+
 int main()
 {
 
