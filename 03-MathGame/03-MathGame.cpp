@@ -190,6 +190,51 @@ void GenerateQuizzQuestions(stQuizz& Quizz)
 	}
 }
 
+// ==========================================
+// Task 4: Answer Checking & Formatting Helpers
+// ==========================================
+
+string GetOpTypeSymbol(enOperationType OpType)
+{
+	string OpTypeSymbol[5] = { "+","-","*","/","Mix" };
+	return OpTypeSymbol[OpType - 1];
+}
+
+string GetQuestionLevelText(enQuestionsLevel QuestionLevel)
+{
+	string QuestionLevelText[4] = { "Easy","Med","Hard","Mix" };
+	return QuestionLevelText[QuestionLevel - 1];
+}
+
+void SetScreenColor(bool Right)
+{
+	Right ? system("color 2f") : system("color 4f");
+}
+
+void CorrectTheQuestionAnswer(stQuizz& Quizz, short QuestionNumber)
+{
+	if (Quizz.QuestionList[QuestionNumber].PlayerAnswer != Quizz.QuestionList[QuestionNumber].CorrectAnswer)
+	{
+		Quizz.QuestionList[QuestionNumber].AnswerResult = false;
+		Quizz.numberOFWrongAnswers++;
+
+		cout << setw(16) << "" << "Wrong Answer :-( \n";
+		cout << setw(16) << "" << "The right answer is: "
+			<< Quizz.QuestionList[QuestionNumber].CorrectAnswer << "\n";
+	}
+	else
+	{
+		Quizz.QuestionList[QuestionNumber].AnswerResult = true;
+		Quizz.numberOfRightAnswers++;
+
+		cout << setw(16) << "" << "Right Answer :-) \n";
+	}
+
+	cout << endl;
+	SetScreenColor(Quizz.QuestionList[QuestionNumber].AnswerResult);
+}
+
+
 int main()
 {
 
